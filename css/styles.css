@@ -5,9 +5,23 @@ main, header, section, aside, footer {
     /*    color: #ffffff;*/
 }
 
-.flex-container {
+.section {
     /* flex: 1;*/
     /*shorthand for flex-grow: 1, flex-shrink: 1, and flex-basis: 0%*/
+    
+    
+}
+
+.field, .version {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1em;
+}
+
+field__input{
+    flex-grow: 1;
+}
+
+.field__label{
+    flex-grow: 1;
 }
