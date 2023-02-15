@@ -12,14 +12,24 @@ main, header, section, aside, footer {
     
 }
 
-.field, .version {
+.field-inline{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 1em;
 }
 
-field__input{
-    flex-grow: 1;
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+}
+
+.datalist--modifier{
+    max-height: 1.3em;
+}
+
+.field__input{
+    flex-grow: 2;
 }
 
 .field__label{
