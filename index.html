@@ -12,11 +12,11 @@
     <form name="anesthesiaForm" class="anesthesiaForm">
         <p>
             <label for="patientId">Páciens:</label>
-            <input type="text" name="patientId" id="patientId">
+            <input type="text" name="patientId" id="patientId" autocomplete="off">
         </p>
         <p>
             <label for="opName">Műtét:</label>
-            <input name="opName" id="opName" list="opList">
+            <input name="opName" id="opName" list="opList" autocomplete="off">
             <datalist id="opList">
                 <option value="Csavar eltávolítás">
                 <option value="Sculptio">
@@ -26,7 +26,7 @@
         </p>
         <p>
             <label for="procName">Beavatkozás:</label>
-            <input name="procName" id="procName" list="procList">
+            <input name="procName" id="procName" list="procList" autocomplete="off">
             <datalist id="procList">
                 <option value="Perifériás vénás kanül">
                 <option value="Artériás kanül">
@@ -52,9 +52,11 @@
             <textarea name="toDo" id="toDo" autocomplete="off" cols="50" rows="4"></textarea>
         </p>
         <p>
+            <label for="otherNote">Teendő:</label><br />
+            <textarea name="otherNote" id="otherNote" autocomplete="off" cols="50" rows="4"></textarea>
+        </p>
+        <p>
             <button type="submit">Küldés</button>
-
-
         </p>
     </form>
 
