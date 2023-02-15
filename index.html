@@ -9,57 +9,64 @@
 </head>
 
 <body>
-    <form name="anesthesiaForm" class="anesthesiaForm">
-        <p>
-            <label for="patientId">Páciens:</label>
-            <input type="text" name="patientId" id="patientId" autocomplete="off">
-        </p>
-        <p>
-            <label for="opName">Műtét:</label>
-            <input name="opName" id="opName" list="opList" autocomplete="off">
-            <datalist id="opList">
-                <option value="Csavar eltávolítás">
-                <option value="Sculptio">
-                <option value="PPPD">
-                <option value="TEN sínezés">
-            </datalist>
-        </p>
-        <p>
-            <label for="procName">Beavatkozás:</label>
-            <input name="procName" id="procName" list="procList" autocomplete="off">
-            <datalist id="procList">
-                <option value="Perifériás vénás kanül">
-                <option value="Artériás kanül">
-                <option value="Orotracheális intubáció">
-                <option value="Nasotracheális intubáció">
-                <option value="Laryngeális maszk">
-                <option value="Spinális anesztézia">
-            </datalist>
+    <main>
 
-            <label for="isProcSuccessful">Sikeres?</label>
-            <select name="isProcSuccessful" id="isProcSuccessful">
-                <option></option>
-                <option value="true">Igen</option>
-                <option value="false">Nem</option>
-            </select>
-        </p>
-        <p>
-            <label for="reasonProcFailed">Sikertelenség oka:</label><br />
-            <textarea name="reasonProcFailed" id="reasonProcFailed" autocomplete="off" cols="50" rows="4"></textarea>
-        </p>
-        <p>
-            <label for="toDo">Teendő:</label><br />
-            <textarea name="toDo" id="toDo" autocomplete="off" cols="50" rows="4"></textarea>
-        </p>
-        <p>
-            <label for="otherNote">Egyéb jegyzet:</label><br />
-            <textarea name="otherNote" id="otherNote" autocomplete="off" cols="50" rows="4"></textarea>
-        </p>
-        <p>
-            <button type="submit">Küldés</button>
-        </p>
-    </form>
+        <!-- Section: Form -->
+        <section class="flex-container">
+            <form name="anesthesiaForm" class="anesthesiaForm">
+                <p>
+                    <label for="patientId">Páciens:</label>
+                    <input type="text" name="patientId" id="patientId" autocomplete="off">
+                </p>
+                <p>
+                    <label for="opName">Műtét:</label>
+                    <input name="opName" id="opName" list="opList" autocomplete="off">
+                    <datalist id="opList">
+                        <option value="Csavar eltávolítás">
+                        <option value="Sculptio">
+                        <option value="PPPD">
+                        <option value="TEN sínezés">
+                    </datalist>
+                </p>
+                <p>
+                    <label for="procName">Beavatkozás:</label>
+                    <input name="procName" id="procName" list="procList" autocomplete="off">
+                    <datalist id="procList">
+                        <option value="Perifériás vénás kanül">
+                        <option value="Artériás kanül">
+                        <option value="Orotracheális intubáció">
+                        <option value="Nasotracheális intubáció">
+                        <option value="Laryngeális maszk">
+                        <option value="Spinális anesztézia">
+                    </datalist>
 
+                    <label for="isProcSuccessful">Sikeres?</label>
+                    <select name="isProcSuccessful" id="isProcSuccessful">
+                        <option></option>
+                        <option value="true">Igen</option>
+                        <option value="false">Nem</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="reasonProcFailed">Sikertelenség oka:</label><br />
+                    <textarea name="reasonProcFailed" id="reasonProcFailed" autocomplete="off" cols="50"
+                        rows="4"></textarea>
+                </p>
+                <p>
+                    <label for="toDo">Teendő:</label><br />
+                    <textarea name="toDo" id="toDo" autocomplete="off" cols="50" rows="4"></textarea>
+                </p>
+                <p>
+                    <label for="otherNote">Egyéb jegyzet:</label><br />
+                    <textarea name="otherNote" id="otherNote" autocomplete="off" cols="50" rows="4"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Küldés</button>
+                </p>
+            </form>
+        </section>
+    
+    </main>
     <script src="./js/script.js"></script>
 </body>
 
