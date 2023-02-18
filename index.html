@@ -17,15 +17,15 @@
         <section class="section">
             <div class="version">v23-02-15.2</div>
             <form class="form" name="anesthesiaForm">
-                <div class="field-inline">
+                <div class="field-row">
                     <label class="field__label" for="patientId">Páciens:</label>
                     <input class="field__input" type="text" name="patientId" id="patientId" autocomplete="off">
                 </div>
-                <div class="field-inline">
+                <div class="field-row">
                     <label class="field__label" for="startTime">Kezdés</label>
                     <input class="field__input" type="datetime-local" id="startTime" name="startTime">
                 </div>
-                <div class="field-inline">
+                <div class="field-row">
                     <label class="field__label" for="opName">Műtét:</label>
                     <input class="field__input" name="opName" id="opName" list="opList" autocomplete="off">
                     <datalist id="opList">
@@ -36,7 +36,7 @@
                     </datalist>
                 </div>
 
-                <div class="field-inline datalist--modifier">
+                <div class="field-row datalist--modifier">
                     <label class="field__label" for="procName">Beavatkozás:</label>
                     <input class="field__input" name="procName" id="procName" list="procList" autocomplete="off">
                     <datalist id="procList">
@@ -47,9 +47,7 @@
                         <option value="Laryngeális maszk">
                         <option value="Spinális anesztézia">
                     </datalist>
-                </div>
-                <div class="field-inline">
-                    <label class="field__label" for="isProcSuccessful">Sikeres?</label>
+                    <label class="field__label__isProcSuccessful" for="isProcSuccessful">Sikeres?</label>
                     <select class="field__select" name="isProcSuccessful" id="isProcSuccessful">
                         <option></option>
                         <option value="true">Igen</option>
@@ -57,20 +55,18 @@
                     </select>
                 </div>
 
-                <div class="field">
+                <div class="field-column">
                     <label class="field__label" for="reasonProcFailed">Sikertelenség oka:</label>
-                    <textarea class="field__textarea" name="reasonProcFailed" id="reasonProcFailed" autocomplete="off"
-                        cols="50" rows="4"></textarea>
+                    <textarea class="field__textarea" name="reasonProcFailed" id="reasonProcFailed"
+                        autocomplete="off"></textarea>
                 </div>
-                <div class="field">
+                <div class="field-column">
                     <label class="field__label" for="toDo">Teendő:</label>
-                    <textarea class="field__textarea" name="toDo" id="toDo" autocomplete="off" cols="50"
-                        rows="4"></textarea>
+                    <textarea class="field__textarea" name="toDo" id="toDo" autocomplete="off"></textarea>
                 </div>
-                <div class="field">
+                <div class="field-column">
                     <label class="field__label" for="otherNote">Egyéb jegyzet:</label>
-                    <textarea class="field__textarea" name="otherNote" id="otherNote" autocomplete="off" cols="50"
-                        rows="4"></textarea>
+                    <textarea class="field__textarea" name="otherNote" id="otherNote" autocomplete="off"></textarea>
                 </div>
 
                 <button type="submit">Küldés</button>

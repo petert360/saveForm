@@ -12,26 +12,40 @@ main, header, section, aside, footer {
     
 }
 
-.field-inline{
+.field-row{
     display: flex;
-    flex-direction: row;
-    margin-bottom: 1em;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em;
 }
 
-.field {
+.field-column {
     display: flex;
     flex-direction: column;
-    margin-bottom: .5em;
+    margin: 1em;
+    justify-content: space-between;
 }
 
 .datalist--modifier{
-    max-height: 1.3em;
+    /*max-height: 1.3em;*/
+}
+
+
+
+.field__label{
+    flex: 0 0 auto;
+    margin: 0em 1em 0em 0em;
+}
+
+.field__label__isProcSuccessful{
+    margin: 0em 1em 0em 1em;
 }
 
 .field__input{
-    flex-grow: 2;
+    flex: 1 1 0px;
 }
 
-.field__label{
-    flex-grow: 1;
+.field__textarea{
+    flex: 1 1 auto;
 }
