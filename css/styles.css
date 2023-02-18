@@ -6,51 +6,46 @@ main, header, section, aside, footer {
 }
 
 .section {
-    /* flex: 1;*/
-    /*shorthand for flex-grow: 1, flex-shrink: 1, and flex-basis: 0%*/
-    
-    
+    margin: 1em;
 }
 
-.field-row{
+.field-row {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 1em;
+    margin: .5em 0;
 }
 
 .field-column {
     display: flex;
     flex-direction: column;
-    margin: 1em;
+    margin: 1em 0 1em 0;
     justify-content: space-between;
 }
 
-.datalist--modifier{
-    /*max-height: 1.3em;*/
-}
-
-
-
-.field__label__row{
-    flex: 0 0 6em;
+.field__label__row {
+    flex: 0 0 5.5em;
     margin: 0em .5em 0em 0em;
 }
 
-.field__label__isProcSuccessful{
-    margin: 0em .5em 0em 1.5em;
-}
-
-.field__label__column{
+.field__label__column {
     flex: 0 0 auto;
     margin: 0em .5em 0em 0em;
 }
 
-.field__input{
+.field__input {
     flex: 1 1 0px;
 }
 
-.field__textarea{
+.field__input__datetime {
+    flex: 0 1 14em;
+}
+
+.field__textarea {
     flex: 1 1 5em;
+}
+
+label:nth-of-type(2) {
+    flex: 0 0 auto;
+    margin: 0em .5em 0em 1.5em;
 }

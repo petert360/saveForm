@@ -15,7 +15,7 @@
 
         <!-- Section: Form -->
         <section class="section">
-            <div class="version">v23-02-15.2</div>
+            <div class="version">v23-02-18.1</div>
             <form class="form" name="anesthesiaForm">
                 <div class="field-row">
                     <label class="field__label__row" for="patientId">Páciens:</label>
@@ -23,7 +23,11 @@
                 </div>
                 <div class="field-row">
                     <label class="field__label__row" for="startTime">Kezdés</label>
-                    <input class="field__input" type="datetime-local" id="startTime" name="startTime">
+                    <input class="field__input__datetime" type="datetime-local" id="startTime" name="startTime">
+                </div>
+                <div class="field-row">
+                    <label class="field__label__row" for="endTime">Befejezés</label>
+                    <input class="field__input__datetime" type="datetime-local" id="endTime" name="endTime">
                 </div>
                 <div class="field-row">
                     <label class="field__label__row" for="opName">Műtét:</label>
@@ -69,7 +73,7 @@
                     <textarea class="field__textarea" name="otherNote" id="otherNote" autocomplete="off"></textarea>
                 </div>
 
-                <button type="submit">Küldés</button>
+                <button class="btn__submit" type="submit">Küldés</button>
                 </p>
             </form>
         </section>
