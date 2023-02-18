@@ -33,13 +33,18 @@ main, header, section, aside, footer {
 
 
 
-.field__label{
-    flex: 0 0 auto;
-    margin: 0em 1em 0em 0em;
+.field__label__row{
+    flex: 0 0 6em;
+    margin: 0em .5em 0em 0em;
 }
 
 .field__label__isProcSuccessful{
-    margin: 0em 1em 0em 1em;
+    margin: 0em .5em 0em 1.5em;
+}
+
+.field__label__column{
+    flex: 0 0 auto;
+    margin: 0em .5em 0em 0em;
 }
 
 .field__input{
@@ -47,5 +52,5 @@ main, header, section, aside, footer {
 }
 
 .field__textarea{
-    flex: 1 1 auto;
+    flex: 1 1 5em;
 }
