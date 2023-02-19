@@ -22,180 +22,185 @@
 
     <!-- START Section: FORM megjelenítés -->
     <section class="section-form">
-      
-        <form class="form" name="anesthesiaForm">
-          <div class="container-form">
 
-            <!-- ROW: páciens id INPUT -->
-            <div class="form-row">
-              <div class="form-item">
-                <label for="patientId">Páciens azonosító</label>
-                <input type="text" name="patientId" id="patientId" autocomplete="off" placeholder="Páciens azonosító">
-              </div>
+      <form class="form" name="anesthesiaForm">
+        <div class="container-form">
+
+          <!-- ROW: páciens id INPUT -->
+          <div class="form-row">
+            <div class="form-item">
+              <label for="patientId">Páciens azonosító</label>
+              <input type="text" name="patientId" id="patientId" autocomplete="off" placeholder="Páciens azonosító">
             </div>
+          </div>
 
-            <!-- ROW: patientAge, patientWeight IMPUTs, patientGender SELECT -->
-            <div class="form-row">
-              <div class="form-item">
-                <label for="patientAge">Kor (év)</label>
-                <input type="number" name="patientAge" id="patientAge" autocomplete="off">
-              </div>
-              <div class="form-item">
-                <label for="patientWeight">Súly (kg)</label>
-                <input type="number" name="patientWeight" id="patientWeight" autocomplete="off">
-              </div>
-              <div class="form-item">
-                <label for="patientGender">Nem</label>
-                <select name="patientGender" id="patientGender">
-                  <option value="" disabled selected></option>
-                  <option value="1">Férfi</option>
-                  <option value="2">Nő</option>
-                </select>
-              </div>
+          <!-- ROW: patientAge, patientWeight IMPUTs, patientGender SELECT -->
+          <div class="form-row">
+            <div class="form-item">
+              <label for="patientAge">Kor (év)</label>
+              <input type="number" name="patientAge" id="patientAge" autocomplete="off">
             </div>
-      
-      <!-- ROW: DIVIDER -->
-      <div class="form-row">
-        <div class="form-item divider">
-        </div>
-      </div>
+            <div class="form-item">
+              <label for="patientWeight">Súly (kg)</label>
+              <input type="number" name="patientWeight" id="patientWeight" autocomplete="off">
+            </div>
+            <div class="form-item">
+              <label for="patientGender">Nem</label>
+              <select name="patientGender" id="patientGender">
+                <option value="" disabled selected></option>
+                <option value="1">Férfi</option>
+                <option value="2">Nő</option>
+              </select>
+            </div>
+            <div class="form-item">
+              <label for="patientASA">ASA</label>
+              <select name="patientASA" id="patientASA">
+                <option value="" disabled selected></option>
+                <option value="I.">Férfi</option>
+                <option value="II.">Nő</option>
+              </select>
+            </div>
+          </div>
 
-      <!-- ROW: IN PROGRESS -->
-      <div class="form-row">
-        <div class="form-item">
-          patientASA-select
-        </div>
-        <div class="form-item">
-          opPriority-select
-        </div>
-        <div class="form-item">
-          isDayCase-select
-        </div>
-      </div>
+          <!-- ROW: DIVIDER -->
+          <div class="form-row">
+            <div class="form-item divider">
+            </div>
+          </div>
 
-      <div class="form-row">
-        <div class="form-item">
-          opSpeciality-datalist
-        </div>
-        <div class="form-item">
-          supervision-select
-        </div>
-        <div class="form-item">
-          supervisor-select
-        </div>
-      </div>
+          <!-- ROW: IN PROGRESS -->
+          <div class="form-row">
+            <div class="form-item tmp form-item-opSpeciality">
+              opSpeciality-datalist
+            </div>
+            <div class="form-item tmp">
+              opPriority-select
+            </div>
+            <div class="form-item tmp">
+              isDayCase-select
+            </div>
+          </div>
 
-      <!-- ROW: DIVIDER -->
-      <div class="form-row">
-        <div class="form-item divider">
-        </div>
-      </div>
+          <div class="form-row">
+            <div class="form-item tmp">
+              supervision-select
+            </div>
+            <div class="form-item tmp">
+              supervisor-select
+            </div>
+          </div>
 
-      <!-- ROW: Start-Stop DATETIME-LOCAL -->
-      <div class="form-row">
-        <div class="form-item">
-          <label for="starTime">Start</label>
-          <input name="startTime" id="startTime" type="datetime-local">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-item">
-          <label for="endTime">Stop</label>
-          <input name="endTime" id="endTime" type="datetime-local">
-        </div>
-      </div>
+          <!-- ROW: DIVIDER -->
+          <div class="form-row">
+            <div class="form-item divider">
+            </div>
+          </div>
 
-      <!-- ROW: opName DATALIST -->
-      <div class="form-row">
-        <div class="form-item">
-          <label for="opName">Műtét</label>
-          <input name="opName" id="opName" list="opList" autocomplete="off">
-          <datalist id="opList">
-            <option value="Csavar eltávolítás">
-            <option value="Sculptio">
-            <option value="PPPD">
-            <option value="TEN sínezés">
-          </datalist>
-        </div>
-      </div>
+          <!-- ROW: Start-Stop DATETIME-LOCAL -->
+          <div class="form-row">
+            <div class="form-item">
+              <label for="starTime">Start</label>
+              <input name="startTime" id="startTime" type="datetime-local">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-item">
+              <label for="endTime">Stop</label>
+              <input name="endTime" id="endTime" type="datetime-local">
+            </div>
+          </div>
 
-      <!-- ROW: DIVIDER -->
-      <div class="form-row">
-        <div class="form-item divider">
-        </div>
-      </div>
+          <!-- ROW: opName DATALIST -->
+          <div class="form-row">
+            <div class="form-item">
+              <label for="opName">Műtét</label>
+              <input name="opName" id="opName" list="opList" autocomplete="off">
+              <datalist id="opList">
+                <option value="Csavar eltávolítás">
+                <option value="Sculptio">
+                <option value="PPPD">
+                <option value="TEN sínezés">
+              </datalist>
+            </div>
+          </div>
 
-      <!-- ROW: Beavatkozás1 DATALIST, SELECT -->
-      <div class="form-row">
-        <div class="form-item form-item-proc">
-          <label for="proc1Name">Beavatkozás #1</label>
-          <input name="proc1Name" id="proc1Name" list="proc1List" autocomplete="off">
-          <datalist id="proc1List">
-            <option value="Perifériás vénás kanül">
-            <option value="Artériás kanül">
-            <option value="Orotracheális intubáció">
-            <option value="Nasotracheális intubáció">
-            <option value="Laryngeális maszk">
-            <option value="Spinális anesztézia">
-          </datalist>
-        </div>
-        <div class="form-item">
-          <label for="isProc1Successful">Sikeres?</label>
-          <select name="isProc1Successful" id="isProc1Successful">
-            <option value="" disabled selected></option>
-            <option value="true">Igen</option>
-            <option value="false">Nem</option>
-          </select>
-        </div>
-      </div>
+          <!-- ROW: DIVIDER -->
+          <div class="form-row">
+            <div class="form-item divider">
+            </div>
+          </div>
 
-      <!-- ROW: Beavatkozás1 TEXTAREA -->
-      <div class="form-row">
-        <div class="form-item">
-          <textarea name="reasonProc1Failed" id="reasonProc1Failed" autocomplete="off"
-            placeholder="Sikertelenség oka"></textarea>
-        </div>
-      </div>
+          <!-- ROW: Beavatkozás1 DATALIST, SELECT -->
+          <div class="form-row">
+            <div class="form-item form-item-proc">
+              <label for="proc1Name">Beavatkozás #1</label>
+              <input name="proc1Name" id="proc1Name" list="proc1List" autocomplete="off">
+              <datalist id="proc1List">
+                <option value="Perifériás vénás kanül">
+                <option value="Artériás kanül">
+                <option value="Orotracheális intubáció">
+                <option value="Nasotracheális intubáció">
+                <option value="Laryngeális maszk">
+                <option value="Spinális anesztézia">
+              </datalist>
+            </div>
+            <div class="form-item">
+              <label for="isProc1Successful">Sikeres?</label>
+              <select name="isProc1Successful" id="isProc1Successful">
+                <option value="" disabled selected></option>
+                <option value="true">Igen</option>
+                <option value="false">Nem</option>
+              </select>
+            </div>
+          </div>
 
-      <!-- ROW: Beavatkozás2 DATALIST, SELECT -->
-      <div class="form-row">
-        <div class="form-item form-item-proc">
-          <label for="proc1Name">Beavatkozás #2</label>
-          <input name="proc2Name" id="proc2Name" list="proc2List" autocomplete="off">
-          <datalist id="proc2List">
-            <option value="Perifériás vénás kanül">
-            <option value="Artériás kanül">
-            <option value="Orotracheális intubáció">
-            <option value="Nasotracheális intubáció">
-            <option value="Laryngeális maszk">
-            <option value="Spinális anesztézia">
-          </datalist>
-        </div>
-        <div class="form-item">
-          <label for="isProc2Successful">Sikeres?</label>
-          <select name="isProc2Successful" id="isProc2Successful">
-            <option value="" disabled selected></option>
-            <option value="true">Igen</option>
-            <option value="false">Nem</option>
-          </select>
-        </div>
-      </div>
+          <!-- ROW: Beavatkozás1 TEXTAREA -->
+          <div class="form-row">
+            <div class="form-item">
+              <textarea name="reasonProc1Failed" id="reasonProc1Failed" autocomplete="off"
+                placeholder="Sikertelenség oka"></textarea>
+            </div>
+          </div>
 
-      <!-- ROW: Beavatkozás2 TEXTAREA -->
-      <div class="form-row">
-        <div class="form-item">
-          <textarea name="reasonProc2Failed" id="reasonProc2Failed" autocomplete="off"
-            placeholder="Sikertelenség oka"></textarea>
-        </div>
-      </div>
+          <!-- ROW: Beavatkozás2 DATALIST, SELECT -->
+          <div class="form-row">
+            <div class="form-item form-item-proc">
+              <label for="proc1Name">Beavatkozás #2</label>
+              <input name="proc2Name" id="proc2Name" list="proc2List" autocomplete="off">
+              <datalist id="proc2List">
+                <option value="Perifériás vénás kanül">
+                <option value="Artériás kanül">
+                <option value="Orotracheális intubáció">
+                <option value="Nasotracheális intubáció">
+                <option value="Laryngeális maszk">
+                <option value="Spinális anesztézia">
+              </datalist>
+            </div>
+            <div class="form-item">
+              <label for="isProc2Successful">Sikeres?</label>
+              <select name="isProc2Successful" id="isProc2Successful">
+                <option value="" disabled selected></option>
+                <option value="true">Igen</option>
+                <option value="false">Nem</option>
+              </select>
+            </div>
+          </div>
 
-      <div class="form-row">
-        <div class="form-item">
-          <button class="btn" type="submit">Küldés</button>
-        </div>
-      </div>
+          <!-- ROW: Beavatkozás2 TEXTAREA -->
+          <div class="form-row">
+            <div class="form-item">
+              <textarea name="reasonProc2Failed" id="reasonProc2Failed" autocomplete="off"
+                placeholder="Sikertelenség oka"></textarea>
+            </div>
+          </div>
 
-      </div>
+          <div class="form-row">
+            <div class="form-item">
+              <button class="btn" type="submit">Küldés</button>
+            </div>
+          </div>
+
+        </div>
 
       </form>
     </section> <!-- END Section: FORM megjelenítés -->

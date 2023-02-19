@@ -47,7 +47,7 @@
     /* border: 1px dotted red; */
 }
 
-.form-item-proc {
+.form-item-proc, .form-item-opSpeciality {
     flex-grow: 5;
 }
 
@@ -79,4 +79,8 @@ textarea {
     height: 1px;
     background-color: #000;
     
+}
+
+.tmp{
+    border: 1px dotted #000 ;
 }
