@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+/* HEADER STYLE*/
+.container-header {
+    height: 4em;
+    display: flex;
+    border: 1px dotted #000;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: #777;
+}
+
+/* FORM STYLE */
+.container-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: lightblue;
+    border: 1px solid black;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px dotted black;
+}

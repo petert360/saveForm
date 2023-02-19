@@ -62,10 +62,14 @@ html, body {
 
 .input-group {
     flex: 1;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     margin: .2em .5em;
+}
+
+.fixed-group {
+    width: 100px;
 }
 
 label {
@@ -108,5 +112,4 @@ textarea {
     border: none;
     border-radius: 5px;
     color: #FFF;
-    cursor: pointer;
 }
