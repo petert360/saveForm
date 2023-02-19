@@ -23,7 +23,7 @@
 
     <!-- START Section: FORM megjelenítés -->
     <section class="section-form">
-      <form class="form" name="anesthesiaForm">
+      <form class="form" name="anesthesiaForm" id="anesthesiaForm">
         <div class="container-form">
           <div class="section-light">
 
@@ -69,12 +69,12 @@
           </div>
 
           <div class="section-dark">
-            <!-- ROW: DIVIDER -->
-<!--             <div class="form-row">
+            <!-- ROW: DIVIDER
+             <div class="form-row">
               <div class="form-item divider">
               </div>
-            </div>
- -->
+            </div> -->
+
             <!-- ROW: opSpeciality: DATALIST, opPriority, isDayCase: SELECT -->
             <div class="form-row">
               <div class="form-item form-item-opSpeciality">
@@ -94,8 +94,8 @@
                 <label for="opPriority">Prioritás</label>
                 <select name="opPriority" id="opPriority">
                   <option value="" disabled selected></option>
-                  <option value="E">"E"</option>
-                  <option value="S">"S"</option>
+                  <option value="E">Elekt.</option>
+                  <option value="S">Sürg.</option>
                 </select>
               </div>
               <div class="form-item">
