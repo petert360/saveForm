@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 500px) {
     .row {
         flex-direction: column;
     }
@@ -31,7 +31,7 @@ html, body {
 
 .form {
     flex: 1;
-    max-width: 412px;
+    max-width: 600px;
     background-color: #EFF0F1;
     border-radius: 10px;
     border: 1px solid #999;
@@ -65,7 +65,7 @@ html, body {
     /*border: 1px solid red;*/
     display: flex;
     flex-direction: column;
-    margin: .5em .5em;
+    margin: .2em .5em;
 }
 
 label {
@@ -81,7 +81,7 @@ textarea,
 select {
     width:auto;
     font-size: 1em;
-    height: 1.5em;
+    height: 2em;
     padding-left: .5em;
     padding-right: .5em;
     color: #999;
