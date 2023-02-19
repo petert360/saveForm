@@ -1,75 +1,52 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-@media only screen and (max-width: 500px) {
-    .row {
-        flex-direction: column;
-    }
-
-    .btn {
-        flex: 1;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
 
 * {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
 }
 
-html, body {
-    height: 100%;
-}
-
-.section {
-    height: 100%;
-    background: #e4e4e4;
+/* HEADER STYLE*/
+.container-header {
+    height: 2em;
     display: flex;
-    justify-content: center;
+    /* border: 1px dotted #000; */
     align-items: center;
-    overflow: scroll;
-}
-
-.form {
-    flex: 1;
-    max-width: 600px;
-    background-color: #EFF0F1;
-    border-radius: 10px;
-    border: 1px solid #999;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.form-header {
-    padding: .5em 0;
-    border-bottom: 1px solid #cccccc;
-}
-
-.form-header h1 {
-    font-size: 1em;
-    text-align: center;
+    justify-content: center;
+    flex: auto;
     color: #777;
-    font-weight: 400;
 }
 
-.form-body {
-    background: white;
-    padding: .5em .5em;
-}
-
-.row {
-    display: flex;
-}
-
-.input-group {
-    flex: 1;
-    border: 1px solid red;
+/* FORM STYLE */
+.container-form {
     display: flex;
     flex-direction: column;
-    margin: .2em .5em;
+    padding: 0em 1em 1em 1em;
 }
 
-.fixed-group {
-    width: 100px;
+.form-row {
+    display: flex;
+    justify-content: space-evenly;
+    /*flex-direction: row;*/
+
+    /* background: lightblue; */
+    /* border: 1px solid black; */
+    margin-bottom: .5em;
+}
+
+.form-item {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 3em;
+    flex-direction: column;
+
+    padding: 0 .3em;
+    /* border: 1px dotted red; */
+}
+
+.form-item-proc{
+    flex-grow: 5;
 }
 
 label {
@@ -78,38 +55,20 @@ label {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="datetime-local"],
-input[name="procName"],
+input[name="proc1Name"], input[name="proc2Name"],
 input[name="opName"],
 textarea,
-select {
-    width:auto;
-    font-size: .9em;
-    height: 2.5em;
-    padding-left: .5em;
-    padding-right: .5em;
-    border: 1px solid #d6d6d6;
-    border-radius: 4px;
-    background: white;
-    outline: none;
+select,
+button {
+    width: 100%;
+    font-size: 1em;
+    height: 2em;
+
 }
 
 textarea {
     resize: none;
-    height: 100px;
-}
-
-.form-footer {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-
-.btn {
-    padding: 10px 20px;
-    background-color: #568afc;
-    font-size: 17px;
-    border: none;
-    border-radius: 5px;
-    color: #FFF;
+    height: 4.5em;
 }

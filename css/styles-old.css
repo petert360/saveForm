@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@media only screen and (max-width: 500px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .btn {
+        flex: 1;
+    }
+}
+
+* {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.section {
+    height: 100%;
+    background: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.form {
+    flex: 1;
+    max-width: 600px;
+    background-color: #EFF0F1;
+    border-radius: 10px;
+    border: 1px solid #999;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.form-header {
+    padding: .5em 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.form-header h1 {
+    font-size: 1em;
+    text-align: center;
+    color: #777;
+    font-weight: 400;
+}
+
+.form-body {
+    background: white;
+    padding: .5em .5em;
+}
+
+.row {
+    display: flex;
+}
+
+.input-group {
+    flex: 1;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    margin: .2em .5em;
+}
+
+.fixed-group {
+    width: 100px;
+}
+
+label {
+    font-size: .7em;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[name="procName"],
+input[name="opName"],
+textarea,
+select {
+    width:auto;
+    font-size: .9em;
+    height: 2.5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #568afc;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+}
