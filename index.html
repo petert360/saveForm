@@ -18,15 +18,15 @@
             <form class="form" name="anesthesiaForm">
 
                 <div class="form-header">
-                    <h1>anesthesiaForm v23-02-19.5</h1>
+                    <h1>anesthesiaForm v23-02-19.6</h1>
                 </div>
 
                 <div class="form-body">
 
                     <div class="row">
                         <div class="input-group">
-                            <label for="patientId">Páciens:</label>
-                            <input type="text" name="patientId" id="patientId" autocomplete="off" placeholder="Páciens">
+                            <input type="text" name="patientId" id="patientId" autocomplete="off"
+                                placeholder="Páciens azonosító">
                         </div>
                     </div>
 
@@ -43,8 +43,8 @@
 
                     <div class="row">
                         <div class="input-group">
-                            <label for="opName">Műtét:</label>
-                            <input name="opName" id="opName" list="opList" autocomplete="off">
+                            <input name="opName" id="opName" list="opList" autocomplete="off"
+                                placeholder="Műtét megnevezése">
                             <datalist id="opList">
                                 <option value="Csavar eltávolítás">
                                 <option value="Sculptio">
@@ -56,8 +56,8 @@
 
                     <div class="row">
                         <div class="input-group">
-                            <label for="procName">Beavatkozás:</label>
-                            <input name="procName" id="procName" list="procList" autocomplete="off">
+                            <input name="procName" id="procName" list="procList" autocomplete="off"
+                                placeholder="Beavatkozás">
                             <datalist id="procList">
                                 <option value="Perifériás vénás kanül">
                                 <option value="Artériás kanül">
@@ -68,9 +68,8 @@
                             </datalist>
                         </div>
                         <div class="input-group">
-                            <label for="isProcSuccessful">Sikeres?</label>
                             <select name="isProcSuccessful" id="isProcSuccessful">
-                                <option></option>
+                                <option value="" disabled selected>Sikeres?</option>
                                 <option value="true">Igen</option>
                                 <option value="false">Nem</option>
                             </select>
