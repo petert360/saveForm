@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* MOBILE VIEW */
+@media only screen and (max-width: 500px) {
+    .row {
+        flex-direction: column;
+    }
+    .btn {
+        flex: 1;
+    }
+}
+
 * {
     margin: 0;
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -20,10 +31,12 @@ html, body {
 
 .form {
     flex: 1;
-    max-width: 400px;
+    max-width: 600px;
     background-color: #EFF0F1;
     border-radius: 10px;
     border: 1px solid #999;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .form-header {
@@ -44,12 +57,12 @@ html, body {
 
 .row {
     display: flex;
-    flex-direction: row;
+    
 }
 
 .input-group {
     flex: 1;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display: flex;
     flex-direction: column;
     margin: .5em .5em;
@@ -61,6 +74,8 @@ label {
 }
 
 input[type="text"], input[type="datetime-local"], input[name="procName"], input[name="opName"], textarea, select {
+    width:100%;
+
     font-size: 1em;
     height: 1.5em;
     padding-left: .5em;
@@ -70,4 +85,25 @@ input[type="text"], input[type="datetime-local"], input[name="procName"], input[
     border-radius: 4px;
     background: white;
     outline: none;
+}
+
+textarea {
+    resize: none;
+    height:100px;
+  }
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding:10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #1BBA93;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    color: #bcf5e7;
+    cursor: pointer;
 }
