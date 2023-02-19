@@ -17,7 +17,7 @@
     <!-- Section: VERSION megjelenítés -->
     <section class="section-version">
       <div class="container-header">
-        <span>saveForm v23-02-19v0.17</span>
+        <span>saveForm v23-02-19v0.18</span>
       </div>
     </section>
 
@@ -25,7 +25,7 @@
     <section class="section-form">
       <form class="form" name="anesthesiaForm">
         <div class="container-form">
-          <div class="section-even">
+          <div class="section-light">
 
             <!-- ROW: páciens id INPUT -->
             <div class="form-row">
@@ -68,13 +68,13 @@
 
           </div>
 
-          <div class="section-odd">
+          <div class="section-dark">
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+<!--             <div class="form-row">
               <div class="form-item divider">
               </div>
             </div>
-
+ -->
             <!-- ROW: opSpeciality: DATALIST, opPriority, isDayCase: SELECT -->
             <div class="form-row">
               <div class="form-item form-item-opSpeciality">
@@ -108,51 +108,14 @@
               </div>
             </div>
 
-            <!-- ROW:*** -->
-            <!-- ROW: IN PROGRESS -->
-            <div class="form-row">
-              <div class="form-item">
-                <label for="supervision">Felügyelet</label>
-                <select name="supervision" id="supervision">
-                  <option value="direct" selected>Közvetlen</option>
-                  <option value="indirect-local">Közvetett helyben</option>
-                  <option value="indirect-distant">Közvetett távol</option>
-                  <option value="teaching">Oktatás</option>
-                  <option value="none">Nincs</option>
-                </select>
-              </div>
-              <div class="form-item">
-                <label for="supervisor">Felügyelő</label>
-                <input name="supervisor" id="supervisor" list="supervisorList" autocomplete="off">
-                <datalist id="supervisorList">
-                  <option value="PAD">
-                  <option value="PTI">
-                  <option value="RKS">
-                  <option value="TIB">
-                  <option value="KEL">
-                </datalist>
-
-              </div>
-            </div>
-
-          </div>
-
-          <div class="section-even">
-            <!-- ROW: DIVIDER -->
-            <div class="form-row">
-              <div class="form-item divider">
-              </div>
-            </div>
-
             <!-- ROW: Start-Stop DATETIME-LOCAL -->
             <div class="form-row">
-              <div class="form-item">
+              <div class="form-item form-item-datetime-local">
                 <label for="starTime">Start</label>
                 <input name="startTime" id="startTime" type="datetime-local">
               </div>
-            </div>
-            <div class="form-row">
-              <div class="form-item">
+
+              <div class="form-item form-item-datetime-local">
                 <label for="endTime">Stop</label>
                 <input name="endTime" id="endTime" type="datetime-local">
               </div>
@@ -175,12 +138,39 @@
 
           </div>
 
-          <div class="section-odd">
+          <div class="section-light">
+
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+            <!-- <div class="form-row">
               <div class="form-item divider">
               </div>
             </div>
+ -->
+            <!-- ROW: supervision: SELECT, supervisor: DATALIST -->
+            <div class="form-row">
+              <div class="form-item">
+                <label for="supervision">Felügyelet</label>
+                <select name="supervision" id="supervision">
+                  <option value="direct" selected>Közvetlen</option>
+                  <option value="indirect-local">Közvetett helyben</option>
+                  <option value="indirect-distant">Közvetett távol</option>
+                  <option value="teaching">Oktatás</option>
+                  <option value="none">Nincs</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="supervisor">Felügyelő</label>
+                <input name="supervisor" id="supervisor" list="supervisorList" autocomplete="off">
+                <datalist id="supervisorList">
+                  <option value="PAD">
+                  <option value="PTI">
+                  <option value="RKS">
+                  <option value="TIB">
+                  <option value="KEL">
+                </datalist>
+              </div>
+            </div>
+
 
             <!-- ROW: Beavatkozás1 DATALIST, SELECT -->
             <div class="form-row">
@@ -215,13 +205,13 @@
             </div>
           </div>
 
-          <div class="section-even">
+          <div class="section-dark">
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+<!--             <div class="form-row">
               <div class="form-item divider">
               </div>
             </div>
-
+ -->
             <!-- ROW: Beavatkozás2 DATALIST, SELECT -->
             <div class="form-row">
               <div class="form-item form-item-proc">
@@ -255,13 +245,13 @@
             </div>
           </div>
 
-          <div class="section-odd">
+          <div class="section-light">
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+<!--             <div class="form-row">
               <div class="form-item divider">
               </div>
             </div>
-
+ -->
             <!-- ROW: Beavatkozás3 DATALIST, SELECT -->
             <div class="form-row">
               <div class="form-item form-item-proc">
@@ -295,13 +285,13 @@
             </div>
           </div>
 
-          <div class="section-even">
+          <div class="section-dark">
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+<!--             <div class="form-row">
               <div class="form-item divider">
               </div>
             </div>
-
+ -->
             <!-- ROW: Beavatkozás4 DATALIST, SELECT -->
             <div class="form-row">
               <div class="form-item form-item-proc">
@@ -335,12 +325,12 @@
             </div>
           </div>
 
-          <div class="section-odd">
+          <div class="section-light">
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+<!--             <div class="form-row">
               <div class="form-item divider">
               </div>
-            </div>
+             </div>-->
             <!-- ROW: toDO TEXTAREA -->
             <div class="form-row">
               <div class="form-item">
@@ -349,11 +339,11 @@
             </div>
 
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+<!--             <div class="form-row">
               <div class="form-item divider">
               </div>
             </div>
-            <!-- ROW: otherNote TEXTAREA -->
+ -->            <!-- ROW: otherNote TEXTAREA -->
             <div class="form-row">
               <div class="form-item">
                 <textarea name="otherNote" id="otherNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
@@ -364,11 +354,11 @@
 
           <div class="container-buttons">
             <!-- ROW: DIVIDER -->
-            <div class="form-row">
+<!--             <div class="form-row">
               <div class="form-item divider">
               </div>
             </div>
-
+ -->
             <div class="form-row">
               <div class="form-item">
                 <button class="btn-reset" type="reset">Törlés</button>
