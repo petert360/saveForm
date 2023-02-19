@@ -15,66 +15,96 @@
 
         <!-- Section: Form -->
         <section class="section">
-            <div class="version">v23-02-18.1</div>
             <form class="form" name="anesthesiaForm">
-                <div class="field-row">
-                    <label class="field__label__row" for="patientId">Páciens:</label>
-                    <input class="field__input" type="text" name="patientId" id="patientId" autocomplete="off">
+                <div class="form-header">
+                    <h1>anesthesiaForm v23-02-18.1</h1>
                 </div>
-                <div class="field-row">
-                    <label class="field__label__row" for="startTime">Kezdés</label>
-                    <input class="field__input__datetime" type="datetime-local" id="startTime" name="startTime">
-                </div>
-                <div class="field-row">
-                    <label class="field__label__row" for="endTime">Befejezés</label>
-                    <input class="field__input__datetime" type="datetime-local" id="endTime" name="endTime">
-                </div>
-                <div class="field-row">
-                    <label class="field__label__row" for="opName">Műtét:</label>
-                    <input class="field__input" name="opName" id="opName" list="opList" autocomplete="off">
-                    <datalist id="opList">
-                        <option value="Csavar eltávolítás">
-                        <option value="Sculptio">
-                        <option value="PPPD">
-                        <option value="TEN sínezés">
-                    </datalist>
+                <div class="form-body">
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="patientId">Páciens:</label>
+                            <input type="text" name="patientId" id="patientId" autocomplete="off" placeholder="Páciens">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label class="field__label__row" for="startTime">Kezdés</label>
+                            <input class="field__input__datetime" type="datetime-local" id="startTime" name="startTime"
+                                placeholder="Páciens">
+                        </div>
+                        <div class="input-group">
+                            <label class="field__label__row" for="endTime">Befejezés</label>
+                            <input class="field__input__datetime" type="datetime-local" id="endTime" name="endTime">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="field-row datalist--modifier">
-                    <label class="field__label__row" for="procName">Beavatkozás:</label>
-                    <input class="field__input" name="procName" id="procName" list="procList" autocomplete="off">
-                    <datalist id="procList">
-                        <option value="Perifériás vénás kanül">
-                        <option value="Artériás kanül">
-                        <option value="Orotracheális intubáció">
-                        <option value="Nasotracheális intubáció">
-                        <option value="Laryngeális maszk">
-                        <option value="Spinális anesztézia">
-                    </datalist>
-                    <label class="field__label__isProcSuccessful" for="isProcSuccessful">Sikeres?</label>
-                    <select class="field__select" name="isProcSuccessful" id="isProcSuccessful">
-                        <option></option>
-                        <option value="true">Igen</option>
-                        <option value="false">Nem</option>
-                    </select>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label for="opName">Műtét:</label>
+                        <input name="opName" id="opName" list="opList" autocomplete="off">
+                        <datalist id="opList">
+                            <option value="Csavar eltávolítás">
+                            <option value="Sculptio">
+                            <option value="PPPD">
+                            <option value="TEN sínezés">
+                        </datalist>
+                    </div>
                 </div>
 
-                <div class="field-column">
-                    <label class="field__label__column" for="reasonProcFailed">Sikertelenség oka:</label>
-                    <textarea class="field__textarea" name="reasonProcFailed" id="reasonProcFailed"
-                        autocomplete="off"></textarea>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="procName">Beavatkozás:</label>
+                        <input name="procName" id="procName" list="procList" autocomplete="off">
+                        <datalist id="procList">
+                            <option value="Perifériás vénás kanül">
+                            <option value="Artériás kanül">
+                            <option value="Orotracheális intubáció">
+                            <option value="Nasotracheális intubáció">
+                            <option value="Laryngeális maszk">
+                            <option value="Spinális anesztézia">
+                        </datalist>
+                    </div>
+                    <div class="input-group">
+                        <label for="isProcSuccessful">Sikeres?</label>
+                        <select name="isProcSuccessful" id="isProcSuccessful">
+                            <option></option>
+                            <option value="true">Igen</option>
+                            <option value="false">Nem</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="field-column">
-                    <label class="field__label__column" for="toDo">Teendő:</label>
-                    <textarea class="field__textarea" name="toDo" id="toDo" autocomplete="off"></textarea>
-                </div>
-                <div class="field-column">
-                    <label class="field__label__column" for="otherNote">Egyéb jegyzet:</label>
-                    <textarea class="field__textarea" name="otherNote" id="otherNote" autocomplete="off"></textarea>
                 </div>
 
-                <button class="btn__submit" type="submit">Küldés</button>
-                </p>
+                <div class="row">
+                    <div class="input-group">
+                        <label class="field__label__column" for="reasonProcFailed">Sikertelenség oka:</label>
+                        <textarea class="field__textarea" name="reasonProcFailed" id="reasonProcFailed"
+                            autocomplete="off" placeholder="Sikertelenség oka"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="toDo">Teendő:</label>
+                        <textarea name="toDo" id="toDo" autocomplete="off" placeholder="Teendő"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="otherNote">Egyéb jegyzet:</label>
+                        <textarea name="otherNote" id="otherNote" autocomplete="off"
+                            placeholder="Egyéb jegyzet"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <button class="btn__submit" type="submit">Küldés</button>
+                    </div>
+                </div>
+
             </form>
         </section>
 

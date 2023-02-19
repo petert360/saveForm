@@ -1,61 +1,69 @@
-main, header, section, aside, footer {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
     margin: 0;
-    /*    padding: 20px;*/
-    /*    border: 1px solid #000000;*/
-    /*    color: #ffffff;*/
+    font-family: "Roboto", sans-serif;
+
 }
 
-body, input {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5em;
-    font-size: .9em;
+html, body {
+    height: 100%;
 }
 
 .section {
-    margin: 1em;
-}
-
-.field-row {
+    height: 100%;
+    background: #78a7ba;
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    margin: .5em 0;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
 }
 
-.field-column {
+.form {
+    flex: 1;
+    max-width: 600px;
+    background-color: #EFF0F1;
+    border-radius: 10px;
+    border: 1px solid #999;
+}
+
+.form-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.form-header h1 {
+    font-size: 1.2em;
+    text-align: center;
+    color: #777;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-group {
+    flex: 1;
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    /*margin: 1em 0 1em 0;*/
-    justify-content: space-between;
+    margin: .5em .5em;
 }
 
-.field__label__row {
-    flex: 0 0 5.5em;
-    margin: 0em .5em 0em 0em;
+label {
+    font-size: .7em;
+    font-weight: 500;
 }
 
-.field__label__column {
-    flex: 0 0 auto;
-    margin: 0em .5em 0em 0em;
-}
-
-.field__input {
-    flex: 1 1 0px;
-}
-
-.field__input__datetime {
-    flex: 0 1 14em;
-}
-
-.field__textarea {
-    flex: 1 1 5em;
-}
-
-label:nth-of-type(2) {
-    flex: 0 0 auto;
-    margin: 0em .5em 0em 1.5em;
-}
-
-.field__label__isProcSuccessful{
-    margin-top: 1em;
-}
+input[type="text"], input[type="datetime-local"], input[name="procName"], input[name="opName"], textarea, select {
+    font-size: 1em;
+    height: 1.5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    color: #999;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+  }
