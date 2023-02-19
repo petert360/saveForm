@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 412px) {
     .row {
         flex-direction: column;
     }
@@ -31,7 +31,7 @@ html, body {
 
 .form {
     flex: 1;
-    max-width: 600px;
+    max-width: 412px;
     background-color: #EFF0F1;
     border-radius: 10px;
     border: 1px solid #999;
@@ -79,7 +79,7 @@ input[name="procName"],
 input[name="opName"],
 textarea,
 select {
-    width: 100%;
+    width:auto;
     font-size: 1em;
     height: 1.5em;
     padding-left: .5em;
