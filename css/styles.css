@@ -60,6 +60,8 @@ input[type="text"],
 input[type="number"],
 input[type="datetime-local"],
 input[name="proc1Name"], input[name="proc2Name"],
+input[name="opSpeciality"],
+input[name="supervisor"],
 input[name="opName"],
 textarea,
 select,
@@ -78,9 +80,34 @@ textarea {
 .divider {
     height: 1px;
     background-color: #000;
-    
+
 }
 
+/* BUTTON Styles*/
+button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.btn-reset {
+    background-color: #DC3545;
+}
+
+.btn-save {
+    color: #000;
+    background-color: #FFC107;
+}
+
+.btn-submit {
+    background-color: #28A745;
+}
+
+
+/*
 .tmp{
     border: 1px dotted #000 ;
 }
+*/

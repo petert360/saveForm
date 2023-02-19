@@ -16,7 +16,7 @@
     <!-- Section: VERSION megjelenítés -->
     <section class="section-version">
       <div class="container-header">
-        <span>saveForm v23-02-19v0.8</span>
+        <span>saveForm v23-02-19v0.9</span>
       </div>
     </section>
 
@@ -71,25 +71,61 @@
             </div>
           </div>
 
-          <!-- ROW: IN PROGRESS -->
+          <!-- ROW: opSpeciality: DATALIST, opPriority, isDayCase: SELECT -->
           <div class="form-row">
-            <div class="form-item tmp form-item-opSpeciality">
-              opSpeciality-datalist
+            <div class="form-item form-item-opSpeciality">
+              <label for="opSpeciality">Műtő</label>
+              <input name="opSpeciality" id="opSpeciality" list="opSpecialityList" autocomplete="off">
+              <datalist id="opSpecialityList">
+                <option value="Trauma">
+                <option value="Általános sebészet">
+                <option value="Idegsebészet">
+                <option value="Szájsebészet">
+                <option value="Szívsebészet">
+                <option value="Egynapos">
+                <option value="Gastroenterologia">
+              </datalist>
             </div>
-            <div class="form-item tmp">
-              opPriority-select
+            <div class="form-item">
+              <label for="opPriority">Prioritás</label>
+              <select name="opPriority" id="opPriority">
+                <option value="" disabled selected></option>
+                <option value="E">"E"</option>
+                <option value="S">"S"</option>
+              </select>
             </div>
-            <div class="form-item tmp">
-              isDayCase-select
+            <div class="form-item">
+              <label for="isDayCase">Egynapos?</label>
+              <select name="isDayCase" id="isDayCase">
+                <option value="" disabled selected></option>
+                <option value="0">Nem</option>
+                <option value="1">Igen</option>
+              </select>
             </div>
           </div>
-
+          <!-- ROW: IN PROGRESS -->
           <div class="form-row">
-            <div class="form-item tmp">
-              supervision-select
+            <div class="form-item">
+              <label for="supervision">Felügyelet</label>
+              <select name="supervision" id="supervision">
+                <option value="direct" selected>Közvetlen</option>
+                <option value="indirect-local">Közvetett helyben</option>
+                <option value="indirect-distant">Közvetett távol</option>
+                <option value="teaching">Oktatás</option>
+                <option value="none">Nincs</option>
+              </select>
             </div>
-            <div class="form-item tmp">
-              supervisor-select
+            <div class="form-item">
+              <label for="supervisor">Felügyelő</label>
+              <input name="supervisor" id="supervisor" list="supervisorList" autocomplete="off">
+              <datalist id="supervisorList">
+                <option value="PAD">
+                <option value="PTI">
+                <option value="RKS">
+                <option value="TIB">
+                <option value="KEL">
+              </datalist>
+
             </div>
           </div>
 
@@ -199,7 +235,16 @@
 
           <div class="form-row">
             <div class="form-item">
-              <button class="btn" type="submit">Küldés</button>
+              <button class="btn-reset" type="reset">Törlés</button>
+            </div>
+            <div class="form-item">
+              <button class="btn-save" type="button">Mentés</button>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-item">
+              <button class="btn-submit" type="submit">Küldés</button>
             </div>
           </div>
 
