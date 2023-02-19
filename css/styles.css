@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500');
 
 * {
     box-sizing: border-box;
@@ -14,7 +14,9 @@
     align-items: center;
     justify-content: center;
     flex: auto;
-    color: #777;
+    font-size: .8em;
+    font-weight: 500;
+    color: #999;
 }
 
 /* FORM STYLE */
@@ -45,7 +47,7 @@
     /* border: 1px dotted red; */
 }
 
-.form-item-proc{
+.form-item-proc {
     flex-grow: 5;
 }
 
@@ -71,4 +73,9 @@ button {
 textarea {
     resize: none;
     height: 4.5em;
+}
+
+.divider {
+    outline: solid 1px;
+    
 }
