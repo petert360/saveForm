@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/* MOBILE VIEW */
 @media only screen and (max-width: 500px) {
     .row {
         flex-direction: column;
     }
+
     .btn {
         flex: 1;
     }
@@ -57,7 +57,7 @@ html, body {
 
 .row {
     display: flex;
-    
+
 }
 
 .input-group {
@@ -73,9 +73,13 @@ label {
     font-weight: 500;
 }
 
-input[type="text"], input[type="datetime-local"], input[name="procName"], input[name="opName"], textarea, select {
-    width:100%;
-
+input[type="text"],
+input[type="datetime-local"],
+input[name="procName"],
+input[name="opName"],
+textarea,
+select {
+    width: 100%;
     font-size: 1em;
     height: 1.5em;
     padding-left: .5em;
@@ -89,13 +93,13 @@ input[type="text"], input[type="datetime-local"], input[name="procName"], input[
 
 textarea {
     resize: none;
-    height:100px;
-  }
+    height: 100px;
+}
 
 .form-footer {
     display: flex;
     justify-content: flex-end;
-    padding:10px;
+    padding: 10px;
 }
 
 .btn {
