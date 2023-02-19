@@ -60,7 +60,7 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="datetime-local"],
-input[name="proc1Name"], input[name="proc2Name"],
+input[name="proc1Name"], input[name="proc2Name"],input[name="proc3Name"],
 input[name="opSpeciality"],
 input[name="supervisor"],
 input[name="opName"],

@@ -30,7 +30,7 @@
           <div class="form-row">
             <div class="form-item">
               <label for="patientId">Páciens azonosító</label>
-              <input type="text" name="patientId" id="patientId" autocomplete="off" placeholder="Páciens azonosító">
+              <input type="text" name="patientId" id="patientId" autocomplete="off">
             </div>
           </div>
 
@@ -103,6 +103,8 @@
               </select>
             </div>
           </div>
+
+          <!-- ROW:*** -->
           <!-- ROW: IN PROGRESS -->
           <div class="form-row">
             <div class="form-item">
@@ -159,6 +161,7 @@
                 <option value="Sculptio">
                 <option value="PPPD">
                 <option value="TEN sínezés">
+                <option value="Osteosynthesis">
               </datalist>
             </div>
           </div>
@@ -204,7 +207,7 @@
           <!-- ROW: Beavatkozás2 DATALIST, SELECT -->
           <div class="form-row">
             <div class="form-item form-item-proc">
-              <label for="proc1Name">Beavatkozás #2</label>
+              <label for="proc2Name">Beavatkozás #2</label>
               <input name="proc2Name" id="proc2Name" list="proc2List" autocomplete="off">
               <datalist id="proc2List">
                 <option value="Perifériás vénás kanül">
@@ -233,6 +236,72 @@
             </div>
           </div>
 
+          <!-- ROW: Beavatkozás3 DATALIST, SELECT -->
+          <div class="form-row">
+            <div class="form-item form-item-proc">
+              <label for="proc3Name">Beavatkozás #3</label>
+              <input name="proc3Name" id="proc3Name" list="proc3List" autocomplete="off">
+              <datalist id="proc3List">
+                <option value="Perifériás vénás kanül">
+                <option value="Artériás kanül">
+                <option value="Orotracheális intubáció">
+                <option value="Nasotracheális intubáció">
+                <option value="Laryngeális maszk">
+                <option value="Spinális anesztézia">
+              </datalist>
+            </div>
+            <div class="form-item">
+              <label for="isProc3Successful">Sikeres?</label>
+              <select name="isProc3Successful" id="isProc2Successful">
+                <option value="" disabled selected></option>
+                <option value="true">Igen</option>
+                <option value="false">Nem</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ROW: Beavatkozás3 TEXTAREA -->
+          <div class="form-row">
+            <div class="form-item">
+              <textarea name="reasonProc2Failed" id="reasonProc2Failed" autocomplete="off"
+                placeholder="Sikertelenség oka"></textarea>
+            </div>
+          </div>
+
+          <!-- ROW: Beavatkozás4 DATALIST, SELECT -->
+          <div class="form-row">
+            <div class="form-item form-item-proc">
+              <label for="proc4Name">Beavatkozás #4</label>
+              <input name="proc4Name" id="proc4Name" list="proc4List" autocomplete="off">
+              <datalist id="proc4List">
+                <option value="Perifériás vénás kanül">
+                <option value="Artériás kanül">
+                <option value="Orotracheális intubáció">
+                <option value="Nasotracheális intubáció">
+                <option value="Laryngeális maszk">
+                <option value="Spinális anesztézia">
+              </datalist>
+            </div>
+            <div class="form-item">
+              <label for="isProc4Successful">Sikeres?</label>
+              <select name="isProc4Successful" id="isProc2Successful">
+                <option value="" disabled selected></option>
+                <option value="true">Igen</option>
+                <option value="false">Nem</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ROW: Beavatkozás4 TEXTAREA -->
+          <div class="form-row">
+            <div class="form-item">
+              <textarea name="reasonProc2Failed" id="reasonProc2Failed" autocomplete="off"
+                placeholder="Sikertelenség oka"></textarea>
+            </div>
+          </div>
+
+
+
           <div class="form-row">
             <div class="form-item">
               <button class="btn-reset" type="reset">Törlés</button>
@@ -241,7 +310,7 @@
               <button class="btn-save" type="button">Mentés</button>
             </div>
           </div>
-          
+
           <div class="form-row">
             <div class="form-item">
               <button class="btn-submit" type="submit">Küldés</button>
