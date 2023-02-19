@@ -21,7 +21,7 @@ html, body {
 
 .form {
     flex: 1;
-    max-width: 600px;
+    max-width: 400px;
     background-color: #EFF0F1;
     border-radius: 10px;
     border: 1px solid #999;
@@ -66,4 +66,4 @@ input[type="text"], input[type="datetime-local"], input[name="procName"], input[
     border-radius: 4px;
     background: white;
     outline: none;
-  }
+}
