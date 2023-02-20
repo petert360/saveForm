@@ -16,13 +16,11 @@
   <main>
     <!-- Section: VERSION megjelenítés -->
     <section class="section-version">
-
       <a href="https://docs.google.com/spreadsheets/d/1miyVWnwpGFcjn-fHbaFfmu0-CZ5TepahsQ8NdfkwkkA/" target="_blank">
         <div class="container-header">
-          <span>saveForm v23-02-20v0.23</span>
+          <span>saveForm v23-02-20v0.24</span>
         </div>
       </a>
-
     </section>
 
 
@@ -47,7 +45,11 @@
                 <input type="number" name="patientAge" id="patientAge" autocomplete="off">
               </div>
               <div class="form-item">
-                <label for="patientWeight">Súly (kg)</label>
+                <label for="patientHeight">Thossz (cm)</label>
+                <input type="number" name="patientHeight" id="patientHeight" autocomplete="off">
+              </div>
+              <div class="form-item">
+                <label for="patientWeight">Tsúly (kg)</label>
                 <input type="number" name="patientWeight" id="patientWeight" autocomplete="off">
               </div>
               <div class="form-item">
@@ -98,8 +100,7 @@
               <div class="form-item">
                 <label for="opPriority">Prioritás</label>
                 <select name="opPriority" id="opPriority">
-                  <option value="" disabled selected></option>
-                  <option value="E">Elekt.</option>
+                  <option value="E" selected>Elekt.</option>
                   <option value="S">Sürg.</option>
                 </select>
               </div>

@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', init, false);
 // let name, email, inus, depts, cookies, comments;
 let patientId,
   patientAge,
+  patientHeight,
   patientWeight,
   patientGender,
   patientASA,
@@ -53,6 +54,7 @@ function init() {
   // get the dom objects one time
   patientId = document.querySelector('#patientId');
   patientAge = document.querySelector('#patientAge');
+  patientHeight = document.querySelector('#patientHeight');
   patientWeight = document.querySelector('#patientWeight');
   patientGender = document.querySelector('#patientGender');
   patientASA = document.querySelector('#patientASA');
@@ -105,6 +107,7 @@ function init() {
   if (cached) {
     patientId.value = cached.patientId;
     patientAge.value = cached.patientAge;
+    patientHeight.value = cached.patientHeight;
     patientWeight.value = cached.patientWeight;
     patientGender.value = cached.patientGender;
     patientASA.value = cached.patientASA;
@@ -154,6 +157,7 @@ function handleChange(e) {
   let form = {};
   form.patientId = patientId.value;
   form.patientAge = patientAge.value;
+  form.patientHeight = patientHeight.value;
   form.patientWeight = patientWeight.value;
   form.patientGender = patientGender.value;
   form.patientASA = patientASA.value;
