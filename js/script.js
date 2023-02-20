@@ -30,7 +30,24 @@ let patientId,
   isDayCase,
   startTime,
   endTime,
-  opName;
+  opName,
+  supervision,
+  supervisor,
+  proc1Name,
+  isProc1Successful,
+  reasonProc1Failed,
+  proc2Name,
+  isProc2Successful,
+  reasonProc2Failed,
+  proc3Name,
+  isProc3Successful,
+  reasonProc3Failed,
+  proc4Name,
+  isProc4Successful,
+  reasonProc4Failed,
+  toDo,
+  otherNote;
+
 
 function init() {
   // get the dom objects one time
@@ -45,6 +62,27 @@ function init() {
   startTime = document.querySelector('#startTime');
   endTime = document.querySelector('#endTime');
   opName = document.querySelector('#opName');
+  supervision = document.querySelector('#supervision');
+  supervisor = document.querySelector('#supervisor');
+
+  proc1Name = document.querySelector('#proc1Name');
+  isProc1Successful = document.querySelector('#isProc1Successful');
+  reasonProc1Failed = document.querySelector('#reasonProc1Failed');
+
+  proc2Name = document.querySelector('#proc2Name');
+  isProc2Successful = document.querySelector('#isProc2Successful');
+  reasonProc2Failed = document.querySelector('#reasonProc2Failed');
+
+  proc3Name = document.querySelector('#proc3Name');
+  isProc3Successful = document.querySelector('#isProc3Successful');
+  reasonProc3Failed = document.querySelector('#reasonProc3Failed');
+
+  proc4Name = document.querySelector('#proc4Name');
+  isProc4Successful = document.querySelector('#isProc4Successful');
+  reasonProc4Failed = document.querySelector('#reasonProc4Failed');
+
+  toDo = document.querySelector('#toDo');
+  otherNote = document.querySelector('#otherNote');
 
   /*email = document.querySelector('#email');
 	inus = document.querySelector('#inus');
@@ -76,6 +114,27 @@ function init() {
     startTime.value = cached.startTime;
     endTime.value = cached.endTime;
     opName.value = cached.opName;
+    supervision.value = cached.supervision;
+    supervisor.value = cached.supervisor;
+
+    proc1Name.value = cached.proc1Name;
+    isProc1Successful.value = cached.isProc1Successful;
+    reasonProc1Failed.value = cached.reasonProc1Failed;
+
+    proc2Name.value = cached.proc2Name;
+    isProc2Successful.value = cached.isProc2Successful;
+    reasonProc2Failed.value = cached.reasonProc2Failed;
+
+    proc3Name.value = cached.proc3Name;
+    isProc3Successful.value = cached.isProc3Successful;
+    reasonProc3Failed.value = cached.reasonProc3Failed;
+
+    proc4Name.value = cached.proc4Name;
+    isProc4Successful.value = cached.isProc4Successful;
+    reasonProc4Failed.value = cached.reasonProc4Failed;
+
+    toDo.value = cached.toDo;
+    otherNote.value = cached.otherNote;
   }
 
   /*document.querySelector('#anesthesiaForm').addEventListener(
@@ -104,6 +163,27 @@ function handleChange(e) {
   form.startTime = startTime.value;
   form.endTime = endTime.value;
   form.opName = opName.value;
+  form.supervision = supervision.value;
+  form.supervisor = supervisor.value;
+
+  form.proc1Name = proc1Name.value;
+  form.isProc1Successful = isProc1Successful.value;
+  form.reasonProc1Failed = reasonProc1Failed.value;
+
+  form.proc2Name = proc2Name.value;
+  form.isProc2Successful = isProc2Successful.value;
+  form.reasonProc2Failed = reasonProc2Failed.value;
+
+  form.proc3Name = proc3Name.value;
+  form.isProc3Successful = isProc3Successful.value;
+  form.reasonProc3Failed = reasonProc3Failed.value;
+
+  form.proc4Name = proc4Name.value;
+  form.isProc4Successful = isProc4Successful.value;
+  form.reasonProc4Failed = reasonProc4Failed.value;
+
+  form.toDo = toDo.value;
+  form.otherNote = otherNote.value;
 
   /*form.email = email.value;
 	form.inus = inus.value;
