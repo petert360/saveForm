@@ -100,7 +100,7 @@ function handleChange(e) {
   form.patientASA = patientASA.value;
   form.opSpeciality = opSpeciality.value;
   form.opPriority = opPriority.value;
-  form isDayCase = isDayCase.value;
+  form.isDayCase = isDayCase.value;
   form.startTime = startTime.value;
   form.endTime = endTime.value;
   form.opName = opName.value;
