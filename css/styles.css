@@ -139,3 +139,8 @@ button {
     color: #fff;
     background-color: #5cb85c
 }
+
+/* LINK STYLES*/
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}

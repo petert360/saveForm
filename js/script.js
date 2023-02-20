@@ -7,7 +7,7 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then(response => {
       //window.localStorage.removeItem('form');
-      form.reset();
+      //Küldésnél törlés - kikapcsolva: form.reset();
       console.log('Success!', response);
       window.alert('Sikeres küldés!');
     })
