@@ -17,6 +17,14 @@ form.addEventListener('submit', e => {
     });
 });
 
+
+/*
+const aForm = document.getElementById('anesthesiaForm');
+const aFormElements = Array.from(aForm.elements);
+const aFormFields = document.querySelectorAll('#anesthesiaForm input, #anesthesiaForm select, #anesthesiaForm textarea');
+arrayAFormFields = Array.from(aFormFields);
+*/
+
 document.addEventListener('DOMContentLoaded', init, false);
 
 // let name, email, inus, depts, cookies, comments;
@@ -36,16 +44,16 @@ let patientId,
   supervisor,
   proc1Name,
   isProc1Successful,
-  reasonProc1Failed,
+  proc1Note,
   proc2Name,
   isProc2Successful,
-  reasonProc2Failed,
+  proc2Note,
   proc3Name,
   isProc3Successful,
-  reasonProc3Failed,
+  proc3Note,
   proc4Name,
   isProc4Successful,
-  reasonProc4Failed,
+  proc4Note,
   toDo,
   otherNote;
 
@@ -68,19 +76,19 @@ function init() {
 
   proc1Name = document.querySelector('#proc1Name');
   isProc1Successful = document.querySelector('#isProc1Successful');
-  reasonProc1Failed = document.querySelector('#reasonProc1Failed');
+  proc1Note = document.querySelector('#proc1Note');
 
   proc2Name = document.querySelector('#proc2Name');
   isProc2Successful = document.querySelector('#isProc2Successful');
-  reasonProc2Failed = document.querySelector('#reasonProc2Failed');
+  proc2Note = document.querySelector('#proc2Note');
 
   proc3Name = document.querySelector('#proc3Name');
   isProc3Successful = document.querySelector('#isProc3Successful');
-  reasonProc3Failed = document.querySelector('#reasonProc3Failed');
+  proc3Note = document.querySelector('#proc3Note');
 
   proc4Name = document.querySelector('#proc4Name');
   isProc4Successful = document.querySelector('#isProc4Successful');
-  reasonProc4Failed = document.querySelector('#reasonProc4Failed');
+  proc4Note = document.querySelector('#proc4Note');
 
   toDo = document.querySelector('#toDo');
   otherNote = document.querySelector('#otherNote');
@@ -121,19 +129,19 @@ function init() {
 
     proc1Name.value = cached.proc1Name;
     isProc1Successful.value = cached.isProc1Successful;
-    reasonProc1Failed.value = cached.reasonProc1Failed;
+    proc1Note.value = cached.proc1Note;
 
     proc2Name.value = cached.proc2Name;
     isProc2Successful.value = cached.isProc2Successful;
-    reasonProc2Failed.value = cached.reasonProc2Failed;
+    proc2Note.value = cached.proc2Note;
 
     proc3Name.value = cached.proc3Name;
     isProc3Successful.value = cached.isProc3Successful;
-    reasonProc3Failed.value = cached.reasonProc3Failed;
+    proc3Note.value = cached.proc3Note;
 
     proc4Name.value = cached.proc4Name;
     isProc4Successful.value = cached.isProc4Successful;
-    reasonProc4Failed.value = cached.reasonProc4Failed;
+    proc4Note.value = cached.proc4Note;
 
     toDo.value = cached.toDo;
     otherNote.value = cached.otherNote;
@@ -171,19 +179,19 @@ function handleChange(e) {
 
   form.proc1Name = proc1Name.value;
   form.isProc1Successful = isProc1Successful.value;
-  form.reasonProc1Failed = reasonProc1Failed.value;
+  form.proc1Note = proc1Note.value;
 
   form.proc2Name = proc2Name.value;
   form.isProc2Successful = isProc2Successful.value;
-  form.reasonProc2Failed = reasonProc2Failed.value;
+  form.proc2Note = proc2Note.value;
 
   form.proc3Name = proc3Name.value;
   form.isProc3Successful = isProc3Successful.value;
-  form.reasonProc3Failed = reasonProc3Failed.value;
+  form.proc3Note = proc3Note.value;
 
   form.proc4Name = proc4Name.value;
   form.isProc4Successful = isProc4Successful.value;
-  form.reasonProc4Failed = reasonProc4Failed.value;
+  form.proc4Note = proc4Note.value;
 
   form.toDo = toDo.value;
   form.otherNote = otherNote.value;
@@ -235,19 +243,19 @@ function loadForm(formName) {
 
     proc1Name.value = cached.proc1Name;
     isProc1Successful.value = cached.isProc1Successful;
-    reasonProc1Failed.value = cached.reasonProc1Failed;
+    proc1Note.value = cached.proc1Note;
 
     proc2Name.value = cached.proc2Name;
     isProc2Successful.value = cached.isProc2Successful;
-    reasonProc2Failed.value = cached.reasonProc2Failed;
+    proc2Note.value = cached.proc2Note;
 
     proc3Name.value = cached.proc3Name;
     isProc3Successful.value = cached.isProc3Successful;
-    reasonProc3Failed.value = cached.reasonProc3Failed;
+    proc3Note.value = cached.proc3Note;
 
     proc4Name.value = cached.proc4Name;
     isProc4Successful.value = cached.isProc4Successful;
-    reasonProc4Failed.value = cached.reasonProc4Failed;
+    proc4Note.value = cached.proc4Note;
 
     toDo.value = cached.toDo;
     otherNote.value = cached.otherNote;
@@ -273,19 +281,19 @@ function storeForm(formName) {
 
   form.proc1Name = proc1Name.value;
   form.isProc1Successful = isProc1Successful.value;
-  form.reasonProc1Failed = reasonProc1Failed.value;
+  form.proc1Note = proc1Note.value;
 
   form.proc2Name = proc2Name.value;
   form.isProc2Successful = isProc2Successful.value;
-  form.reasonProc2Failed = reasonProc2Failed.value;
+  form.proc2Note = proc2Note.value;
 
   form.proc3Name = proc3Name.value;
   form.isProc3Successful = isProc3Successful.value;
-  form.reasonProc3Failed = reasonProc3Failed.value;
+  form.proc3Note = proc3Note.value;
 
   form.proc4Name = proc4Name.value;
   form.isProc4Successful = isProc4Successful.value;
-  form.reasonProc4Failed = reasonProc4Failed.value;
+  form.proc4Note = proc4Note.value;
 
   form.toDo = toDo.value;
   form.otherNote = otherNote.value;
