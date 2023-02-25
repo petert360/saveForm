@@ -55,7 +55,8 @@ let patientId,
   isProc4Successful,
   proc4Note,
   toDo,
-  otherNote;
+  otherNote,
+  itemBMI;
 
 function init() {
   // get the dom objects one time
@@ -93,6 +94,8 @@ function init() {
   toDo = document.querySelector('#toDo');
   otherNote = document.querySelector('#otherNote');
 
+  itemBMI = document.querySelector('.item-bmi-value');
+  itemIBW = document.querySelector('.item-ibw-value');
   /*email = document.querySelector('#email');
 	inus = document.querySelector('#inus');
 	depts = document.querySelectorAll('input[name=department]');
@@ -209,6 +212,14 @@ function handleChange(e) {
 		if(c.checked) form.cookies.push(c.value);
 	});*/
 
+  // calculate BMI
+  let bmi = Math.round(patientWeight.value/(patientHeight.value*patientHeight.value)*10000);
+  let ibw = Math.round(50 + (0.91 * (patientHeight.value - 152.4)));
+  itemBMI.innerText=('BMI: '+ bmi);
+  itemIBW.innerText=('IBW: '+ ibw);
+
+
+  
   // now store
   saveForm(form, 'form');
 }

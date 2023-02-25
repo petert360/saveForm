@@ -32,9 +32,28 @@
 
             <!-- ROW: páciens id INPUT -->
             <div class="form-row">
-              <div class="form-item">
+              <div class="form-item form-item-ptId">
                 <label for="patientId">Páciens azonosító</label>
                 <input type="text" name="patientId" id="patientId" autocomplete="off">
+              </div>
+              <div class="form-item">
+                <label for="patientGender">Nem</label>
+                <select name="patientGender" id="patientGender">
+                  <option value="" selected></option>
+                  <option value="1">Férfi</option>
+                  <option value="2">Nő</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="patientASA">ASA</label>
+                <select name="patientASA" id="patientASA">
+                  <option value="" selected></option>
+                  <option value="1">I.</option>
+                  <option value="2">II.</option>
+                  <option value="3">III.</option>
+                  <option value="4">IV.</option>
+                  <option value="5">V.</option>
+                </select>
               </div>
             </div>
 
@@ -52,24 +71,15 @@
                 <label for="patientWeight">Tsúly (kg)</label>
                 <input type="number" name="patientWeight" id="patientWeight" autocomplete="off">
               </div>
-              <div class="form-item">
-                <label for="patientGender">Nem</label>
-                <select name="patientGender" id="patientGender">
-                  <option value="" selected></option>
-                  <option value="1">Férfi</option>
-                  <option value="2">Nő</option>
-                </select>
-              </div>
-              <div class="form-item">
-                <label for="patientASA">ASA</label>
-                <select name="patientASA" id="patientASA">
-                  <option value="" disabled selected></option>
-                  <option value="1">I.</option>
-                  <option value="2">II.</option>
-                  <option value="3">III.</option>
-                  <option value="4">IV.</option>
-                  <option value="5">V.</option>
-                </select>
+              <div class="form-item form-item-bmi-ibw">
+                <div class="form-row-text">
+                  <span class="item-bmi-value">BMI:</span>
+                  <span class="item-measure">m<sup>2</sup></sup>/kg</span>
+                </div>
+                <div class="form-row-text">
+                  <span class="item-ibw-value">IBW: </span>
+                  <span class="item-measure">kg</span>
+                </div>
               </div>
             </div>
 
@@ -209,8 +219,7 @@
             <!-- ROW: Beavatkozás1 TEXTAREA -->
             <div class="form-row">
               <div class="form-item">
-                <textarea name="proc1Note" id="proc1Note" autocomplete="off"
-                  placeholder="Megjegyzés"></textarea>
+                <textarea name="proc1Note" id="proc1Note" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
           </div>
@@ -249,8 +258,7 @@
             <!-- ROW: Beavatkozás2 TEXTAREA -->
             <div class="form-row">
               <div class="form-item">
-                <textarea name="proc2Note" id="proc2Note" autocomplete="off"
-                  placeholder="Megjegyzés"></textarea>
+                <textarea name="proc2Note" id="proc2Note" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
           </div>
@@ -289,8 +297,7 @@
             <!-- ROW: Beavatkozás3 TEXTAREA -->
             <div class="form-row">
               <div class="form-item">
-                <textarea name="proc3Note" id="proc3Note" autocomplete="off"
-                  placeholder="Megjegyzés"></textarea>
+                <textarea name="proc3Note" id="proc3Note" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
           </div>
@@ -329,8 +336,7 @@
             <!-- ROW: Beavatkozás4 TEXTAREA -->
             <div class="form-row">
               <div class="form-item">
-                <textarea name="proc4Note" id="proc4Note" autocomplete="off"
-                  placeholder="Megjegyzés"></textarea>
+                <textarea name="proc4Note" id="proc4Note" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
           </div>
