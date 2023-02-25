@@ -54,6 +54,7 @@
     /* border: 1px solid black; */
     /* margin-bottom: .5em; */
 }
+
 /* BMI, IBW kijelzése*/
 .form-row-text {
     display: flex;
@@ -62,26 +63,30 @@
     align-items: flex-end;
 }
 
-
 .form-item {
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 3em;
     flex-direction: column;
-    align-self:center;
+    align-self: center;
 
     padding: 0 .3em;
     /* border: 1px dotted red; */
+}
+
+.form-item-bmi-ibw {
+    align-self: flex-end;
+    
 }
 
 .form-item-proc, .form-item-opSpeciality, .form-item-ptId {
     flex-grow: 5;
 }
 
-.item-bmi-value, .item-ibw-value, .item-measure{
+.item-bmi-value, .item-ibw-value {
     font-size: 0.8em;
- }
+}
 
 .form-item-datetime-local {
     width: 10px;

@@ -30,7 +30,7 @@
         <div class="container-form">
           <div class="section-light">
 
-            <!-- ROW: páciens id INPUT -->
+            <!-- ROW: patientId INPUT, patientGender, patientASA SELECT -->
             <div class="form-row">
               <div class="form-item form-item-ptId">
                 <label for="patientId">Páciens azonosító</label>
@@ -57,28 +57,26 @@
               </div>
             </div>
 
-            <!-- ROW: patientAge, patientWeight IMPUTs, patientGender SELECT -->
+            <!-- ROW: patientAge, patientHeight, patientWeight INPUTs, BMI, IBW-->
             <div class="form-row">
               <div class="form-item">
                 <label for="patientAge">Kor (év)</label>
                 <input type="number" name="patientAge" id="patientAge" autocomplete="off">
               </div>
               <div class="form-item">
-                <label for="patientHeight">Thossz (cm)</label>
+                <label for="patientHeight">Testhossz (cm)</label>
                 <input type="number" name="patientHeight" id="patientHeight" autocomplete="off">
               </div>
               <div class="form-item">
-                <label for="patientWeight">Tsúly (kg)</label>
+                <label for="patientWeight">Testsúly (kg)</label>
                 <input type="number" name="patientWeight" id="patientWeight" autocomplete="off">
               </div>
               <div class="form-item form-item-bmi-ibw">
                 <div class="form-row-text">
                   <span class="item-bmi-value">BMI:</span>
-                  <span class="item-measure">m<sup>2</sup></sup>/kg</span>
                 </div>
                 <div class="form-row-text">
                   <span class="item-ibw-value">IBW: </span>
-                  <span class="item-measure">kg</span>
                 </div>
               </div>
             </div>

@@ -17,7 +17,6 @@ form.addEventListener('submit', e => {
     });
 });
 
-
 /*
 const aForm = document.getElementById('anesthesiaForm');
 const aFormElements = Array.from(aForm.elements);
@@ -213,13 +212,28 @@ function handleChange(e) {
 	});*/
 
   // calculate BMI
-  let bmi = Math.round(patientWeight.value/(patientHeight.value*patientHeight.value)*10000);
-  let ibw = Math.round(50 + (0.91 * (patientHeight.value - 152.4)));
-  itemBMI.innerText=('BMI: '+ bmi);
-  itemIBW.innerText=('IBW: '+ ibw);
+  let bmi, ibw;
+  bmi = Math.round(
+    (patientWeight.value / (patientHeight.value * patientHeight.value)) * 10000
+  );
+//https://pubs.asahq.org/anesthesiology/article/127/1/203/18747/Calculating-Ideal-Body-Weight-Keep-It-Simple
+  if ((patientGender.value == 1)) {
+    ibw = Math.round(50 + 0.91 * (patientHeight.value - 152.4));
+  } else if (patientGender.value == 2) {
+    ibw = Math.round(45.5 + 0.91 * (patientHeight.value - 152.4));
+  }
 
+  if (bmi > 10 && bmi < 50) {
+    itemBMI.innerText = 'BMI: ' + bmi + ' m\u00B2/kg';
+  } else {
+    itemBMI.innerText = 'BMI:';
+  }
+  if (ibw > 0 && ibw < 150) {
+    itemIBW.innerText = 'IBW: ' + ibw + ' kg';
+  } else {
+    itemIBW.innerText = 'IBW:';
+  }
 
-  
   // now store
   saveForm(form, 'form');
 }
