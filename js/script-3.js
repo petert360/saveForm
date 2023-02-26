@@ -28,8 +28,8 @@ const aFormFields = document.querySelectorAll(
 );
 // create an array from DOM object
 const arrayAFormFieldElements = Array.from(aFormFields);
-// az "arrayAFormFieldElements[0]" megfelel a "patientId = document.querySelector('#patientId');" kifejezésnek
 
+// launch init()
 document.addEventListener('DOMContentLoaded', init, false);
 
 function init() {
@@ -44,9 +44,6 @@ function init() {
   );
   elems.forEach(e => e.addEventListener('input', handleChange, false));
 
-  /*let elems = Array.from(document.querySelectorAll('#anesthesiaForm input, #anesthesiaForm select, #anesthesiaForm textarea'));
-	elems.forEach(e => e.addEventListener('input', handleChange, false));*/
-
   // load form data from localstorage
   const cached = getForm('form');
 
@@ -55,6 +52,7 @@ function init() {
     aFormFields.forEach(element => {
       element.value = cached[element.name];
     });
+  
     // calculate BMI and IBW
     let bmi = calculateBMI(cached['patientHeight'], cached['patientWeight']);
     let ibw = calculateIBW(cached['patientGender'], cached['patientHeight']);
