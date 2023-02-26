@@ -55,6 +55,10 @@ function init() {
     aFormFields.forEach(element => {
       element.value = cached[element.name];
     });
+    // calculate BMI and IBW
+    let bmi = calculateBMI(cached['patientHeight'], cached['patientWeight']);
+    let ibw = calculateIBW(cached['patientGender'], cached['patientHeight']);
+    setAnthropometry(bmi, ibw);
   }
 }
 
