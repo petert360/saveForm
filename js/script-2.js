@@ -20,8 +20,10 @@ form.addEventListener('submit', e => {
 /*
 const aForm = document.getElementById('anesthesiaForm');
 const aFormElements = Array.from(aForm.elements);
+
 const aFormFields = document.querySelectorAll('#anesthesiaForm input, #anesthesiaForm select, #anesthesiaForm textarea');
-arrayAFormFields = Array.from(aFormFields);
+const arrayAFormFieldElements = Array.from(aFormFields);
+az "arrayAFormFieldElements[0]" megfelel a "patientId = document.querySelector('#patientId');" kifejezésnek
 */
 
 document.addEventListener('DOMContentLoaded', init, false);
@@ -198,6 +200,13 @@ function handleChange(e) {
   form.toDo = toDo.value;
   form.otherNote = otherNote.value;
 
+  //objektum létrehozása
+  /*
+    const objA = {}
+    arrayAFormFieldElements.forEach((elem, i) => {
+    objA[i] = elem.name;
+  });*/
+
   /*form.email = email.value;
 	form.inus = inus.value;
 	form.comments = comments.value;*/
@@ -216,8 +225,8 @@ function handleChange(e) {
   bmi = Math.round(
     (patientWeight.value / (patientHeight.value * patientHeight.value)) * 10000
   );
-//https://pubs.asahq.org/anesthesiology/article/127/1/203/18747/Calculating-Ideal-Body-Weight-Keep-It-Simple
-  if ((patientGender.value == 1)) {
+  //https://pubs.asahq.org/anesthesiology/article/127/1/203/18747/Calculating-Ideal-Body-Weight-Keep-It-Simple
+  if (patientGender.value == 1) {
     ibw = Math.round(50 + 0.91 * (patientHeight.value - 152.4));
   } else if (patientGender.value == 2) {
     ibw = Math.round(45.5 + 0.91 * (patientHeight.value - 152.4));
