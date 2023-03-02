@@ -52,7 +52,7 @@ function init() {
     aFormFields.forEach(element => {
       element.value = cached[element.name];
     });
-  
+
     // calculate BMI and IBW
     let bmi = calculateBMI(cached['patientHeight'], cached['patientWeight']);
     let ibw = calculateIBW(cached['patientGender'], cached['patientHeight']);
@@ -132,6 +132,17 @@ function calculateIBW(gender, height) {
 
 function setAnthropometry(bmi, ibw) {
   if (bmi > 10 && bmi < 50) {
+    if (bmi < 18.5) {
+      itemBMI.style.color = 'blue';
+    } else if (bmi >= 18.5 && bmi < 25) {
+      itemBMI.style.color = 'green';
+    } else if (bmi >= 25 && bmi < 30) {
+      itemBMI.style.color = 'goldenrod';
+    } else if (bmi >= 30 && bmi < 35) {
+      itemBMI.style.color = 'darkorange';
+    } else if (bmi >= 35) {
+      itemBMI.style.color = 'red';
+    }
     itemBMI.innerText = 'BMI: ' + bmi + ' m\u00B2/kg';
   } else {
     itemBMI.innerText = 'BMI:';
