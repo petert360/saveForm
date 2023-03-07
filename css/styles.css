@@ -79,8 +79,12 @@
 
 }
 
-.form-item-proc, .form-item-opSpeciality, .form-item-ptId {
+.form-item-proc, .form-item-opSpeciality {
     flex-grow: 5;
+}
+
+.form-item-ptId, .form-item-ptTsz {
+    flex-grow: 3;
 }
 
 .item-bmi-value, .item-ibw-value {
@@ -143,7 +147,7 @@ button {
 
 button:active {
     transform: scale(0.96);
-	transition: .1s;
+    transition: .1s;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3)
 }
 
