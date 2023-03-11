@@ -76,10 +76,9 @@
 
 .form-item-bmi-ibw {
     align-self: flex-end;
-
 }
 
-.form-item-proc, .form-item-opSpeciality {
+.form-item-proc, .form-item-opSpeciality, .form-item-neuraxial {
     flex-grow: 5;
 }
 
@@ -93,6 +92,11 @@
 
 .form-item-datetime-local {
     width: 10px;
+}
+
+.form-item-checkBoxSpa{
+    
+    justify-content: flex-start;
 }
 
 label {

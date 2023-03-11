@@ -18,7 +18,7 @@
     <section class="section-version">
       <a href="https://docs.google.com/spreadsheets/d/1miyVWnwpGFcjn-fHbaFfmu0-CZ5TepahsQ8NdfkwkkA/" target="_blank">
         <div class="container-header">
-          <span>saveForm v23-03-07v0.31</span>
+          <span>saveForm v23-03-11v0.32</span>
         </div>
       </a>
     </section>
@@ -100,13 +100,13 @@
                 <label for="opSpeciality">Műtő</label>
                 <input name="opSpeciality" id="opSpeciality" list="opSpecialityList" autocomplete="off">
                 <datalist id="opSpecialityList">
-                  <option value="Trauma">
                   <option value="Általános sebészet">
+                  <option value="Egynapos">
+                  <option value="Gastroenterologia">
                   <option value="Idegsebészet">
                   <option value="Szájsebészet">
                   <option value="Szívsebészet">
-                  <option value="Egynapos">
-                  <option value="Gastroenterologia">
+                  <option value="Trauma">
                 </datalist>
               </div>
               <div class="form-item">
@@ -144,30 +144,23 @@
                 <label for="opName">Műtét</label>
                 <input name="opName" id="opName" list="opList" autocomplete="off">
                 <datalist id="opList">
-                  <option value="Csavar eltávolítás">
-                  <option value="Sculptio">
-                  <option value="PPPD">
-                  <option value="TEN sínezés">
-                  <option value="Osteosynthesis">
-                  <option value="Heracles szegezés">
-                  <option value="Heracles szegezés, cerclage">
+                  <option value="Amputáció">
+                  <option value="Arthroscopia - térd">
+                  <option value="Arthroscopia - váll">
                   <option value="CKP (cervicocapitalis endoprothesis)">
-                  <option value="Arthroscopia (térd)">
-                  <option value="Arthroscopia (váll)">
+                  <option value="Csavar eltávolítás">
+                  <option value="Heracles szegezés, cerclage">
+                  <option value="Heracles szegezés">
+                  <option value="Osteosynthesis">
+                  <option value="PPPD">
+                  <option value="Sculptio">
+                  <option value="TEN sínezés">
+                  <option value="TEP - csípő">
+                  <option value="TEP - térd">
                 </datalist>
               </div>
             </div>
 
-          </div>
-
-          <div class="section-light">
-
-            <!-- ROW: DIVIDER -->
-            <!-- <div class="form-row">
-              <div class="form-item divider">
-              </div>
-            </div>
- -->
             <!-- ROW: supervision: SELECT, supervisor: DATALIST -->
             <div class="form-row">
               <div class="form-item">
@@ -184,15 +177,20 @@
                 <label for="supervisor">Felügyelő</label>
                 <input name="supervisor" id="supervisor" list="supervisorList" autocomplete="off">
                 <datalist id="supervisorList">
+                  <option value="HAS">
+                  <option value="KEL">
+                  <option value="NAL">
                   <option value="PAD">
                   <option value="PTI">
                   <option value="RKS">
                   <option value="TIB">
-                  <option value="KEL">
                 </datalist>
               </div>
             </div>
 
+          </div>
+
+          <div class="section-light">
 
             <!-- ROW: Beavatkozás1 DATALIST, SELECT -->
             <div class="form-row">
@@ -224,15 +222,11 @@
                 <textarea name="proc1Note" id="proc1Note" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
+
           </div>
 
           <div class="section-dark">
-            <!-- ROW: DIVIDER -->
-            <!--             <div class="form-row">
-              <div class="form-item divider">
-              </div>
-            </div>
- -->
+
             <!-- ROW: Beavatkozás2 DATALIST, SELECT -->
             <div class="form-row">
               <div class="form-item form-item-proc">
@@ -266,12 +260,7 @@
           </div>
 
           <div class="section-light">
-            <!-- ROW: DIVIDER -->
-            <!--             <div class="form-row">
-              <div class="form-item divider">
-              </div>
-            </div>
- -->
+
             <!-- ROW: Beavatkozás3 DATALIST, SELECT -->
             <div class="form-row">
               <div class="form-item form-item-proc">
@@ -305,12 +294,6 @@
           </div>
 
           <div class="section-dark">
-            <!-- ROW: DIVIDER -->
-            <!--             <div class="form-row">
-              <div class="form-item divider">
-              </div>
-            </div>
- -->
             <!-- ROW: Beavatkozás4 DATALIST, SELECT -->
             <div class="form-row">
               <div class="form-item form-item-proc">
@@ -357,12 +340,6 @@
               </div>
             </div>
 
-            <!-- ROW: DIVIDER -->
-            <!--             <div class="form-row">
-              <div class="form-item divider">
-              </div>
-            </div>
- -->
             <!-- ROW: otherNote TEXTAREA -->
             <div class="form-row">
               <div class="form-item">
@@ -372,14 +349,54 @@
             </div>
           </div>
 
+          <div class="section-dark">
+            <div class="form-row">
 
-          <div class="container-buttons">
-            <!-- ROW: DIVIDER -->
-            <!--             <div class="form-row">
-              <div class="form-item divider">
+              <div class="form-item form-item-checkBoxSpa">
+                <label for="spaCheck">SPA</label>
+                <input type="checkbox" id="spaCheck" name="spaCheck" value="TRUE">
+              </div>
+
+              <div class="form-item form-item-neuraxial">
+                <label for="neuraxial">Neuraxiális anesztezia</label>
+                <select disabled name="neuraxial" id="neuraxial">
+                  <option value="" selected></option>
+                  <option value="spa">Spinális anesztézia</option>
+                  <option value="epi">Epidurális anesztézia</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="isNeuraxialSuccessful">Sikeres?</label>
+                <select disabled name="isNeuraxialSuccessful" id="isNeuraxialSuccessful">
+                  <option value="" selected></option>
+                  <option value="true">Igen</option>
+                  <option value="false">Nem</option>
+                </select>
               </div>
             </div>
- -->
+            <div class="form-row">
+              <div class="form-item">
+                <label for="hbBupivacanineVol">HB Bupivacaine (ml)</label>
+                <input disabled type="number" name="hbBupivacanineVol" id="hbBupivacanineVol" autocomplete="off">
+              </div>
+              <div class="form-item">
+                <label for="spaHeight">SPA magasság</label>
+                <input disabled type="number" name="spaHeight" id="spaHeight" autocomplete="off">
+              </div>
+              <div class="form-item">
+                <label for="spaMinute">SPA beállás (perc)</label>
+                <input disabled type="number" name="spaMinute" id="spaMinute" autocomplete="off">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-item">
+                <textarea disabled name="spaNote" id="spaNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-buttons">
+
             <div class="form-row">
               <div class="form-item">
                 <button class="btn btn-reset" type="reset">Törlés</button>
@@ -439,9 +456,6 @@
                 <button class="btn-loadForm1" type="button" onclick="loadForm('form5')">Betöltés 5</button>
               </div>
             </div>
-
-
-
 
           </div>
 
