@@ -94,9 +94,10 @@
     width: 10px;
 }
 
-.form-item-checkBoxSpa{
+.form-item-checkboxSpa{
     
-    justify-content: flex-start;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
 
 label {

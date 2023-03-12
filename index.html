@@ -352,35 +352,35 @@
           <div class="section-dark">
             <div class="form-row">
 
-              <div class="form-item form-item-checkBoxSpa">
+              <div class="form-item form-item-checkboxSpa">
                 <label for="isSPA">SPA</label>
-                <input type="checkbox" id="isSPA" name="isSPA" value="TRUE">
+                <input type="checkbox" id="spaDone" name="spaDone" value="1">
               </div>
 
               <div class="form-item">
                 <label for="isNeuraxialSuccessful">Sikeres?</label>
-                <select disabled name="isNeuraxialSuccessful" id="isNeuraxialSuccessful">
+                <select name="spaSuccessful" id="spaSuccessful">
                   <option value="" selected></option>
-                  <option value="true">Igen</option>
-                  <option value="false">Nem</option>
+                  <option value="1">Igen</option>
+                  <option value="0">Nem</option>
                 </select>
               </div>
               <div class="form-item">
                 <label for="hbBupivacanineVol">hBV (ml)</label>
-                <input disabled type="number" name="hbBupivacanineVol" id="hbBupivacanineVol" autocomplete="off">
+                <input type="number" name="spaVol" id="spaVol" autocomplete="off">
               </div>
               <div class="form-item">
                 <label for="spaHeight">Magasság</label>
-                <input disabled type="number" name="spaHeight" id="spaHeight" autocomplete="off">
+                <input type="text" name="spaHeight" id="spaHeight" autocomplete="off">
               </div>
               <div class="form-item">
                 <label for="spaMinute">Perc</label>
-                <input disabled type="number" name="spaMinute" id="spaMinute" autocomplete="off">
+                <input type="number" name="spaMinute" id="spaMinute" autocomplete="off">
               </div>
             </div>
             <div class="form-row">
               <div class="form-item">
-                <textarea disabled name="spaNote" id="spaNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
+                <textarea name="spaNote" id="spaNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
           </div>
