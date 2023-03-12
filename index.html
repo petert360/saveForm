@@ -18,7 +18,7 @@
     <section class="section-version">
       <a href="https://docs.google.com/spreadsheets/d/1miyVWnwpGFcjn-fHbaFfmu0-CZ5TepahsQ8NdfkwkkA/" target="_blank">
         <div class="container-header">
-          <span>saveForm v23-03-12v0.33</span>
+          <span>saveForm v23-03-12v0.34</span>
         </div>
       </a>
     </section>
@@ -197,7 +197,7 @@
 
               <div class="form-item form-item-checkboxSpa">
                 <label for="isSPA">SPA</label>
-                <input type="checkbox" id="spaDone" name="spaDone" value="1">
+                <input class="form-item-checkboxSquare" type="checkbox" id="spaDone" name="spaDone" value="1">
               </div>
 
               <div class="form-item">
@@ -209,7 +209,11 @@
                 </select>
               </div>
               <div class="form-item">
-                <label for="hbBupivacanineVol">hBV (ml)</label>
+                <label for="spaAttempts">Szúrás #</label>
+                <input type="number" name="spaAttempts" id="spaAttempts" autocomplete="off">
+              </div>
+              <div class="form-item">
+                <label for="spaVol">hBV (ml)</label>
                 <input type="number" name="spaVol" id="spaVol" autocomplete="off">
               </div>
               <div class="form-item">

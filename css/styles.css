@@ -45,10 +45,10 @@
 
 .form-row {
     display: flex;
-    justify-content: space-evenly;
     padding-bottom: .3em;
-    /*flex-direction: row;*/
 
+    /* justify-content: space-evenly; */
+    /*flex-direction: row;*/
     /* background: lightblue; */
     /* border: 1px solid black; */
     /* margin-bottom: .5em; */
@@ -66,7 +66,7 @@
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 3em;
+    flex-basis: 2em;
     flex-direction: column;
     align-self: center;
 
@@ -94,11 +94,16 @@
     width: 10px;
 }
 
-.form-item-checkboxSpa{
-    
+.form-item-checkboxSpa {
     flex-grow: 0;
     flex-shrink: 1;
 }
+
+.form-item-checkboxSquare {
+    align-self: flex-start;
+    width: 2em;
+}
+
 
 label {
     font-size: .7em;
