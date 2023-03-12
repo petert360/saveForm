@@ -50,7 +50,12 @@ function init() {
   // if localstorage available, then fill form from localstorage
   if (cached) {
     aFormFields.forEach(element => {
-      element.value = cached[element.name];
+      if (element.type == 'checkbox') {
+        // if element is a checbox, test, if it's value is 'true' then assigt the test result to the element.checked status
+        element.checked = cached[element.name] === 'true';
+      } else {
+        element.value = cached[element.name];
+      }
     });
 
     // calculate BMI and IBW
@@ -64,9 +69,14 @@ function handleChange(e) {
   console.log('handleChange');
 
   // creat the 'form' object, and assign the arrayAFormFieldElement to that
+  // if the element is a checkbox, assant the true/false status
   const form = {};
   arrayAFormFieldElements.forEach(element => {
-    form[element.name] = element.value;
+    if (element.type == 'checkbox') {
+      form[element.name] = element.checked.toString();
+    } else {
+      form[element.name] = element.value;
+    }
   });
 
   // calculate BMI and IBW
