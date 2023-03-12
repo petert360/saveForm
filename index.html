@@ -18,7 +18,7 @@
     <section class="section-version">
       <a href="https://docs.google.com/spreadsheets/d/1miyVWnwpGFcjn-fHbaFfmu0-CZ5TepahsQ8NdfkwkkA/" target="_blank">
         <div class="container-header">
-          <span>saveForm v23-03-11v0.32</span>
+          <span>saveForm v23-03-12v0.33</span>
         </div>
       </a>
     </section>
@@ -192,6 +192,47 @@
 
           <div class="section-light">
 
+            <!-- ROW: SPA CHECKBOX, SELECT, INPUTs -->
+            <div class="form-row">
+
+              <div class="form-item form-item-checkboxSpa">
+                <label for="isSPA">SPA</label>
+                <input type="checkbox" id="spaDone" name="spaDone" value="1">
+              </div>
+
+              <div class="form-item">
+                <label for="isNeuraxialSuccessful">Sikeres?</label>
+                <select name="spaSuccessful" id="spaSuccessful">
+                  <option value="" selected></option>
+                  <option value="1">Igen</option>
+                  <option value="0">Nem</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="hbBupivacanineVol">hBV (ml)</label>
+                <input type="number" name="spaVol" id="spaVol" autocomplete="off">
+              </div>
+              <div class="form-item">
+                <label for="spaHeight">Magasság</label>
+                <input type="text" name="spaHeight" id="spaHeight" autocomplete="off">
+              </div>
+              <div class="form-item">
+                <label for="spaMinute">Perc</label>
+                <input type="number" name="spaMinute" id="spaMinute" autocomplete="off">
+              </div>
+            </div>
+
+            <!-- ROW: SPA TEXTAREA -->
+            <div class="form-row">
+              <div class="form-item">
+                <textarea name="spaNote" id="spaNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="section-dark">
+
             <!-- ROW: Beavatkozás1 DATALIST, SELECT -->
             <div class="form-row">
               <div class="form-item form-item-proc">
@@ -225,7 +266,7 @@
 
           </div>
 
-          <div class="section-dark">
+          <div class="section-light">
 
             <!-- ROW: Beavatkozás2 DATALIST, SELECT -->
             <div class="form-row">
@@ -259,7 +300,7 @@
             </div>
           </div>
 
-          <div class="section-light">
+          <div class="section-dark">
 
             <!-- ROW: Beavatkozás3 DATALIST, SELECT -->
             <div class="form-row">
@@ -293,39 +334,6 @@
             </div>
           </div>
 
-          <div class="section-dark">
-            <!-- ROW: Beavatkozás4 DATALIST, SELECT -->
-            <div class="form-row">
-              <div class="form-item form-item-proc">
-                <label for="proc4Name">Beavatkozás #4</label>
-                <input name="proc4Name" id="proc4Name" list="proc4List" autocomplete="off">
-                <datalist id="proc4List">
-                  <option value="Perifériás vénás kanül">
-                  <option value="Artériás kanül">
-                  <option value="Orotracheális intubáció">
-                  <option value="Nasotracheális intubáció">
-                  <option value="Laryngeális maszk">
-                  <option value="Spinális anesztézia">
-                </datalist>
-              </div>
-              <div class="form-item">
-                <label for="isProc4Successful">Sikeres?</label>
-                <select name="isProc4Successful" id="isProc4Successful">
-                  <option value="" selected></option>
-                  <option value="true">Igen</option>
-                  <option value="false">Nem</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- ROW: Beavatkozás4 TEXTAREA -->
-            <div class="form-row">
-              <div class="form-item">
-                <textarea name="proc4Note" id="proc4Note" autocomplete="off" placeholder="Megjegyzés"></textarea>
-              </div>
-            </div>
-          </div>
-
           <div class="section-light">
             <!-- ROW: DIVIDER -->
             <!--             <div class="form-row">
@@ -345,42 +353,6 @@
               <div class="form-item">
                 <label for="otherNote">Megjegyzés</label>
                 <textarea name="otherNote" id="otherNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
-              </div>
-            </div>
-          </div>
-
-          <div class="section-dark">
-            <div class="form-row">
-
-              <div class="form-item form-item-checkboxSpa">
-                <label for="isSPA">SPA</label>
-                <input type="checkbox" id="spaDone" name="spaDone" value="1">
-              </div>
-
-              <div class="form-item">
-                <label for="isNeuraxialSuccessful">Sikeres?</label>
-                <select name="spaSuccessful" id="spaSuccessful">
-                  <option value="" selected></option>
-                  <option value="1">Igen</option>
-                  <option value="0">Nem</option>
-                </select>
-              </div>
-              <div class="form-item">
-                <label for="hbBupivacanineVol">hBV (ml)</label>
-                <input type="number" name="spaVol" id="spaVol" autocomplete="off">
-              </div>
-              <div class="form-item">
-                <label for="spaHeight">Magasság</label>
-                <input type="text" name="spaHeight" id="spaHeight" autocomplete="off">
-              </div>
-              <div class="form-item">
-                <label for="spaMinute">Perc</label>
-                <input type="number" name="spaMinute" id="spaMinute" autocomplete="off">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-item">
-                <textarea name="spaNote" id="spaNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
           </div>
