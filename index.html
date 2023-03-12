@@ -18,7 +18,8 @@
     <section class="section-version">
       <a href="https://docs.google.com/spreadsheets/d/1miyVWnwpGFcjn-fHbaFfmu0-CZ5TepahsQ8NdfkwkkA/" target="_blank">
         <div class="container-header">
-          <span>saveForm v23-03-12v0.34</span>
+          <span>saveForm v23-03-12v0.37</span>
+          <span class="formID">formID#</span>
         </div>
       </a>
     </section>
@@ -196,12 +197,12 @@
             <div class="form-row">
 
               <div class="form-item form-item-checkboxSpa">
-                <label for="isSPA">SPA</label>
+                <label for="spaDone">SPA</label>
                 <input class="form-item-checkboxSquare" type="checkbox" id="spaDone" name="spaDone" value="1">
               </div>
 
               <div class="form-item">
-                <label for="isNeuraxialSuccessful">Sikeres?</label>
+                <label for="spaSuccessful">Sikeres?</label>
                 <select name="spaSuccessful" id="spaSuccessful">
                   <option value="" selected></option>
                   <option value="1">Igen</option>
@@ -232,8 +233,37 @@
                 <textarea name="spaNote" id="spaNote" autocomplete="off" placeholder="Megjegyzés"></textarea>
               </div>
             </div>
-          </div>
 
+            <!-- ROW: PVC CHECKBOX, SELECT, INPUTs -->
+            <div class="form-row">
+
+              <div class="form-item form-item-checkboxPvc">
+                <label for="pvcDone">PVK</label>
+                <input class="form-item-checkboxSquare" type="checkbox" id="pvcDone" name="pvcDone" value="1">
+              </div>
+
+              <div class="form-item">
+                <label for="pvcSuccessful">Sikeres?</label>
+                <select name="pvcSuccessful" id="pvcSuccessful">
+                  <option value="" selected></option>
+                  <option value="1">Igen</option>
+                  <option value="0">Nem</option>
+                </select>
+              </div>
+
+              <div class="form-item">
+                <label for="pvcSize">Méret (G)</label>
+                <input type="number" name="pvcSize" id="pvcSize" autocomplete="off">
+              </div>
+
+              <div class="form-item">
+                <label for="pvcAttempts">Szúrás #</label>
+                <input type="number" name="pvcAttempts" id="pvcAttempts" autocomplete="off">
+              </div>
+
+            </div>
+
+          </div>
 
           <div class="section-dark">
 

@@ -29,10 +29,13 @@ const aFormFields = document.querySelectorAll(
 // create an array from DOM object
 const arrayAFormFieldElements = Array.from(aFormFields);
 
+let formIdNumber;
+
 // launch init()
 document.addEventListener('DOMContentLoaded', init, false);
 
 function init() {
+  formIdElement = document.querySelector('.formID');
   itemBMI = document.querySelector('.item-bmi-value');
   itemIBW = document.querySelector('.item-ibw-value');
 
@@ -51,7 +54,7 @@ function init() {
   if (cached) {
     aFormFields.forEach(element => {
       if (element.type == 'checkbox') {
-        // if element is a checbox, test, if it's value is 'true' then assigt the test result to the element.checked status
+        // if element is a checkbox, test, if it's value is 'true' then assigt the test result to the element.checked status
         element.checked = cached[element.name] === 'true';
       } else {
         element.value = cached[element.name];
@@ -103,17 +106,27 @@ function loadForm(formName) {
   let cached = getForm(formName);
   // if localstorage available, then fill form from localstorage
   if (cached) {
+    setFormIdElement(formName);
     aFormFields.forEach(element => {
-      element.value = cached[element.name];
+      if (element.type == 'checkbox') {
+        element.checked = cached[element.name] === 'true';
+      } else {
+        element.value = cached[element.name];
+      }
     });
   }
 }
 
 function storeForm(formName) {
   // creat the 'form' object, and assign the arrayAFormFieldElement to that
+  setFormIdElement(formName);
   const form = {};
   arrayAFormFieldElements.forEach(element => {
-    form[element.name] = element.value;
+    if (element.type == 'checkbox') {
+      form[element.name] = element.checked.toString();
+    } else {
+      form[element.name] = element.value;
+    }
   });
 
   // now store
@@ -162,4 +175,9 @@ function setAnthropometry(bmi, ibw) {
   } else {
     itemIBW.innerText = 'IBW:';
   }
+}
+
+function setFormIdElement(id) {
+  formIdNumber = id;
+  formIdElement.innerText = id;
 }
