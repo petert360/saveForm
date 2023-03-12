@@ -52,6 +52,7 @@ function init() {
 
   // if localstorage available, then fill form from localstorage
   if (cached) {
+    setFormIdElement(cached['id']);
     aFormFields.forEach(element => {
       if (element.type == 'checkbox') {
         // if element is a checkbox, test, if it's value is 'true' then assigt the test result to the element.checked status
@@ -74,6 +75,7 @@ function handleChange(e) {
   // creat the 'form' object, and assign the arrayAFormFieldElement to that
   // if the element is a checkbox, assant the true/false status
   const form = {};
+  form['id'] = 'temporary';
   arrayAFormFieldElements.forEach(element => {
     if (element.type == 'checkbox') {
       form[element.name] = element.checked.toString();
@@ -106,7 +108,7 @@ function loadForm(formName) {
   let cached = getForm(formName);
   // if localstorage available, then fill form from localstorage
   if (cached) {
-    setFormIdElement(formName);
+    setFormIdElement(cached['id']);
     aFormFields.forEach(element => {
       if (element.type == 'checkbox') {
         element.checked = cached[element.name] === 'true';
@@ -118,9 +120,10 @@ function loadForm(formName) {
 }
 
 function storeForm(formName) {
-  // creat the 'form' object, and assign the arrayAFormFieldElement to that
+  // create the 'form' object, and assign the arrayAFormFieldElement to that
   setFormIdElement(formName);
   const form = {};
+  form['id'] = formName;
   arrayAFormFieldElements.forEach(element => {
     if (element.type == 'checkbox') {
       form[element.name] = element.checked.toString();
@@ -129,7 +132,7 @@ function storeForm(formName) {
     }
   });
 
-  // now store
+  // save to localstorage
   saveForm(form, formName);
 }
 
