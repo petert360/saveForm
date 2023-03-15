@@ -95,7 +95,7 @@
     width: 10px;
 }
 
-.form-item-checkboxSpa, .form-item-checkboxPvc {
+.form-item-checkboxSpa, .form-item-checkboxPvc, .form-item-shrink {
     flex-grow: 0;
     flex-shrink: 1;
 }
