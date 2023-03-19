@@ -10,12 +10,12 @@ form.addEventListener('submit', e => {
       //Küldésnél törlés - kikapcsolva: form.reset();
       console.log('Success!', response);
       //window.alert('Sikeres küldés!');
-      showModal('Sikeres küldés');
+      showModal('Sikeres küldés', '#5cb85c');
     })
     .catch(error => {
       console.error('Error!', error.message);
       //window.alert('Hibás küldés!');
-      showModal('Hibás küldés');
+      showModal('Hibás küldés', 'red');
     });
 });
 
@@ -199,6 +199,7 @@ var span = document.getElementsByClassName('close')[0];
 
 // Get the modal-message div
 const modalMessage = document.querySelector('.modal-message');
+const modalContent = document.querySelector('.modal-content');
 
 // When the user clicks the button, open the modal
 /*btn.onclick = function () {
@@ -217,7 +218,9 @@ window.onclick = function (event) {
   }
 };
 
-function showModal(msg) {
+function showModal(msg, color) {
   modalMessage.innerText = msg;
+  modalContent.style.backgroundColor = color;
   modal.style.display = 'block';
+  
 }
