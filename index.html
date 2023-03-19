@@ -21,7 +21,7 @@
     <section class="section-version">
       <a href="https://docs.google.com/spreadsheets/d/1miyVWnwpGFcjn-fHbaFfmu0-CZ5TepahsQ8NdfkwkkA/" target="_blank">
         <div class="container-header">
-          <span>saveForm v23-03-15v0.42</span>
+          <span>saveForm v23-03-19v0.43</span>
           <span class="formID">formID#</span>
         </div>
       </a>
@@ -404,7 +404,7 @@
                 <button class="btn btn-reset" type="reset">Törlés</button>
               </div>
               <div class="form-item">
-                <button class="btn btn-save" type="button">Mentés</button>
+                <button class="btn btn-save" type="button" onclick="showModal('teszt 123')">Mentés</button>
               </div>
             </div>
 
@@ -466,5 +466,25 @@
       </form>
     </section> <!-- END Section: FORM megjelenítés -->
   </main>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-message"></div>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+
+  </div>
+
   <script src="./js/script-3.js"></script>
 </body>
